@@ -1,0 +1,94 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+/* Built-in Sass modules you’ll likely use across partials */
+@use "sass:math";
+@use "sass:string";
+
+/* Configure your design tokens BEFORE loading any of your partials.
+   Make sure `_sass/_variables.scss` declares `$max-content-width: 72rem !default;` */
+@use "variables" with (
+  $max-content-width: {{ site.max_width | default:  "930px" }}
+);
+
+/* Your project partials — convert these files to `@use "variables";`
+   (or `@use "variables" as *;`) inside each file and qualify variables if needed. */
+@use "themes";
+@use "layout";
+
+// Core styles organized by usage
+@use "typography";
+@use "navbar";
+@use "footer";
+@use "blog";
+@use "publications";
+@use "components";
+@use "utilities";
+
+// Other specialized styles
+@use "tabs";
+@use "teachings";
+@use "typograms";
+
+// -----------------------------------------------------------------------------
+// Site brand color override (UMass Maroon).
+// Change this single value to re-skin every accent/link/hover on the site.
+// -----------------------------------------------------------------------------
+$brand-color: #881c1c;
+
+:root,
+html[data-theme="dark"] {
+  --global-theme-color: #{$brand-color};
+  --global-hover-color: #{$brand-color};
+}
+
+// Navbar labels use lowercase; page titles (h1) keep normal capitalization.
+.navbar-nav.navbar-menu-list > .nav-item > .nav-link {
+  text-transform: lowercase;
+}
+
+// On the collapsed (mobile) navbar, absolute + dropdown-menu-right aligns the
+// menu to a narrow "Team" trigger and clips most of it off the left edge of
+// the viewport. Expand dropdowns inline so every item stays fully visible.
+@media (max-width: 575.98px) {
+  .navbar .navbar-nav .nav-item.dropdown {
+    width: 100%;
+  }
+
+  .navbar .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+    margin-top: 0.25rem;
+    box-shadow: none;
+  }
+}
+
+// Extra breathing room between markdown headings and body text (page layout).
+.post article {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  // MkDocs-style section dividers between major (h2) sections.
+  // Use :not(:first-child) so the first h2 still gets a line when intro text precedes it.
+  h2:not(:first-child) {
+    border-top: 1px solid var(--global-divider-color);
+    padding-top: 1.5rem;
+  }
+
+  > h2:first-child,
+  > h3:first-child,
+  > h4:first-child,
+  > h5:first-child,
+  > h6:first-child {
+    margin-top: 0;
+  }
+}
