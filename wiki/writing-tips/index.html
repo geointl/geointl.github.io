@@ -1,0 +1,960 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Writing Tips | GeoIntelligence </title> <meta name="author" content="Yongjin Choi"> <meta name="description" content="Six principles for revising scientific and technical prose — applied as a unified pass, not a mechanical checklist."> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/choi-research/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/choi-research/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="stylesheet" href="/choi-research/assets/css/main.css?v=f0b101217084a90093badfe99ff9a7d1"> <link rel="canonical" href="https://yjchoi1.github.io/choi-research/wiki/writing-tips/"> <script src="/choi-research/assets/js/theme.js?v=7af685e2ba20b37fef545c97b8064050"></script> <link defer rel="stylesheet" href="/choi-research/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-bold" href="/choi-research/"> GeoIntelligence </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/choi-research/">home </a> </li> <li class="nav-item "> <a class="nav-link" href="/choi-research/research/">Research </a> </li> <li class="nav-item dropdown "> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-nav-dropdown-toggle="true" aria-haspopup="true" aria-expanded="false">Team </a> <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown"> <a class="dropdown-item " href="/choi-research/team/">PI</a> <a class="dropdown-item " href="/choi-research/team/members/">Members</a> <div class="dropdown-divider"></div> <a class="dropdown-item " href="/choi-research/openings/">Openings</a> </div> </li> <li class="nav-item "> <a class="nav-link" href="/choi-research/publications/">Publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/choi-research/software/">Software </a> </li> <li class="nav-item "> <a class="nav-link" href="/choi-research/courses/">Courses </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.css" integrity="sha256-zTN0r+0OKaIv2xqeNNIYxNk0pWJ6+IqPGc1iDgVzWF0=" crossorigin="anonymous"> <script defer src="https://cdn.jsdelivr.net/npm/tocbot@4.36.4/dist/tocbot.min.js" integrity="sha256-lo/r+jQ81wWrxdIiiiEEd538z4+dTJTt+leOuAS7GCw=" crossorigin="anonymous"></script> <style>
+  .wiki-sidebar {
+    position: sticky;
+    top: 5.5rem;
+    max-height: calc(100vh - 6.5rem);
+    overflow-y: auto;
+    padding-right: 1rem;
+    border-right: 1px solid var(--global-divider-color, #dee2e6);
+  }
+
+  .wiki-nav-label {
+    margin: 0 0 0.75rem;
+    padding: 0 0.75rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light, #6c757d);
+  }
+
+  .wiki-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .wiki-nav > li {
+    margin-bottom: 0.125rem;
+  }
+
+  .wiki-nav > li > a {
+    display: block;
+    padding: 0.45rem 0.75rem;
+    border-left: 2px solid transparent;
+    border-radius: 0 0.25rem 0.25rem 0;
+    color: var(--global-text-color, #333);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.45;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease,
+      border-color 0.15s ease;
+  }
+
+  .wiki-nav > li > a:hover {
+    background: color-mix(in srgb, var(--global-theme-color, #4285f4) 6%, transparent);
+    color: var(--global-theme-color, #4285f4);
+  }
+
+  .wiki-nav > li.active > a {
+    background: color-mix(in srgb, var(--global-theme-color, #4285f4) 10%, transparent);
+    border-left-color: var(--global-theme-color, #4285f4);
+    color: var(--global-theme-color, #4285f4);
+    font-weight: 600;
+  }
+
+  .wiki-nav .toc-sidebar {
+    margin: 0.25rem 0 1rem;
+    padding-left: 0;
+    font-size: 0.8125rem;
+    position: static !important;
+  }
+
+  .wiki-nav li.active .toc-sidebar::before {
+    content: "On this page";
+    display: block;
+    margin: 0.5rem 0 0.35rem 0.75rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--global-text-color-light, #6c757d);
+  }
+
+  .wiki-nav .toc-sidebar .toc-list {
+    margin: 0 0 0 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 1px solid var(--global-divider-color, #dee2e6);
+  }
+
+  .wiki-nav .toc-sidebar .toc-link {
+    color: var(--global-text-color-light, #6c757d);
+    text-decoration: none;
+    display: block;
+    padding: 0.2rem 0.5rem 0.2rem 0;
+    line-height: 1.4;
+    border-radius: 0.2rem;
+    transition:
+      color 0.15s ease,
+      background-color 0.15s ease;
+  }
+
+  .wiki-nav .toc-sidebar .toc-link:hover {
+    color: var(--global-theme-color, #4285f4);
+    background: color-mix(in srgb, var(--global-theme-color, #4285f4) 6%, transparent);
+  }
+
+  .wiki-nav .toc-sidebar .toc-link.is-active-link {
+    color: var(--global-theme-color, #4285f4);
+    font-weight: 600;
+  }
+
+  .wiki-content .post-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--global-divider-color, #dee2e6);
+  }
+
+  .wiki-content .post-title {
+    margin-bottom: 0.625rem;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+  }
+
+  .wiki-content .post-description {
+    margin-bottom: 0;
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--global-text-color-light, #6c757d);
+  }
+
+  .wiki-article {
+    max-width: 48rem;
+    font-size: 0.9375rem;
+    line-height: 1.75;
+  }
+
+  .wiki-article > :first-child {
+    margin-top: 0;
+  }
+
+  .wiki-article p {
+    margin-bottom: 1.25rem;
+  }
+
+  .wiki-article h2 {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-top: 0.75rem;
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.3;
+    border-top: 1px solid var(--global-divider-color, #dee2e6);
+  }
+
+  .wiki-article h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .wiki-article h3 {
+    margin-top: 1.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  .wiki-article h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .wiki-article ul,
+  .wiki-article ol {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    padding-left: 1.625rem;
+  }
+
+  .wiki-article li {
+    margin-bottom: 0.375rem;
+  }
+
+  .wiki-article li:last-child {
+    margin-bottom: 0;
+  }
+
+  .wiki-article hr {
+    margin: 2rem 0;
+  }
+
+  .wiki-article code {
+    font-size: 0.875em;
+    padding: 0.125rem 0.35rem;
+    border-radius: 0.2rem;
+    background: color-mix(in srgb, var(--global-text-color, #333) 6%, transparent);
+  }
+
+  .wiki-article pre {
+    margin: 1.25rem 0;
+    padding: 0.875rem 1rem;
+    border-radius: 0.375rem;
+    overflow-x: auto;
+    background: color-mix(in srgb, var(--global-text-color, #333) 6%, transparent);
+  }
+
+  .wiki-article pre code {
+    padding: 0;
+    background: transparent;
+  }
+
+  .wiki-article table:not(.table) {
+    margin: 1.25rem 0;
+  }
+
+  /* Muted blockquotes (attributions, asides — not admonitions) */
+  .wiki-article blockquote:not(.markdown-alert) {
+    margin: 1rem 0 1.5rem;
+    padding: 0.625rem 0 0.625rem 0.875rem;
+    border: none;
+    border-left: 2px solid var(--global-divider-color, #dee2e6);
+    border-radius: 0;
+    background: transparent;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--global-text-color-light, #6c757d);
+  }
+
+  .wiki-article blockquote:not(.markdown-alert) p,
+  .wiki-article blockquote:not(.markdown-alert) li {
+    margin-bottom: 0.5rem;
+    color: var(--global-text-color-light, #6c757d);
+  }
+
+  .wiki-article blockquote:not(.markdown-alert) p:last-child,
+  .wiki-article blockquote:not(.markdown-alert) li:last-child {
+    margin-bottom: 0;
+  }
+
+  .wiki-article blockquote:not(.markdown-alert) a {
+    color: var(--global-text-color-light, #6c757d);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, var(--global-text-color-light, #6c757d) 45%, transparent);
+  }
+
+  .wiki-article blockquote:not(.markdown-alert) a:hover {
+    color: var(--global-theme-color, #4285f4);
+    text-decoration-color: currentColor;
+  }
+
+  .wiki-article blockquote:not(.markdown-alert) ul {
+    margin: 0.375rem 0 0;
+    padding-left: 1.25rem;
+  }
+
+  /* Material-style admonitions */
+  .wiki-article blockquote.markdown-alert {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-left: 0.25rem solid;
+    border-radius: 0.25rem;
+    font-size: inherit;
+    line-height: 1.65;
+    box-shadow: none;
+  }
+
+  .markdown-alert-title {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  .markdown-alert-title i {
+    font-size: 0.9375rem;
+    opacity: 0.9;
+  }
+
+  .markdown-alert p {
+    margin-bottom: 0.75rem;
+  }
+
+  .markdown-alert p:last-child {
+    margin-bottom: 0;
+  }
+
+  .markdown-alert-note {
+    border-left-color: #448aff;
+    background: color-mix(in srgb, #448aff 11%, var(--global-card-bg-color, #f6f8fa));
+  }
+
+  .markdown-alert-note .markdown-alert-title {
+    color: #448aff;
+  }
+
+  .markdown-alert-tip {
+    border-left-color: #00bfa5;
+    background: color-mix(in srgb, #00bfa5 11%, var(--global-card-bg-color, #f6f8fa));
+  }
+
+  .markdown-alert-tip .markdown-alert-title {
+    color: #00a88f;
+  }
+
+  .markdown-alert-important {
+    border-left-color: #7c4dff;
+    background: color-mix(in srgb, #7c4dff 11%, var(--global-card-bg-color, #f6f8fa));
+  }
+
+  .markdown-alert-important .markdown-alert-title {
+    color: #7c4dff;
+  }
+
+  .markdown-alert-warning {
+    border-left-color: #ff9100;
+    background: color-mix(in srgb, #ff9100 11%, var(--global-card-bg-color, #f6f8fa));
+  }
+
+  .markdown-alert-warning .markdown-alert-title {
+    color: #e65100;
+  }
+
+  .markdown-alert-caution {
+    border-left-color: #ff5252;
+    background: color-mix(in srgb, #ff5252 11%, var(--global-card-bg-color, #f6f8fa));
+  }
+
+  .markdown-alert-caution .markdown-alert-title {
+    color: #ff5252;
+  }
+
+  @media (max-width: 575.98px) {
+    .wiki-sidebar {
+      position: static;
+      max-height: none;
+      margin-bottom: 1.5rem;
+      border-right: none;
+      border-bottom: 1px solid var(--global-divider-color, #dee2e6);
+      padding-bottom: 1rem;
+    }
+
+    .wiki-content .post-title {
+      font-size: 1.625rem;
+    }
+  }
+</style> <div class="row wiki-layout"> <div class="col-sm-3"> <nav class="wiki-sidebar" aria-label="Lab Wiki navigation"> <p class="wiki-nav-label">Lab Wiki</p> <ul class="wiki-nav"> <li class=""> <a href="/choi-research/wiki/">Overview</a> </li> <li class=""> <a href="/choi-research/wiki/onboarding/">Onboarding</a> </li> <li class=""> <a href="/choi-research/wiki/code-of-conduct/">Code of Conduct</a> </li> <li class="active"> <a href="/choi-research/wiki/writing-tips/">Writing Tips</a> <nav id="toc-sidebar" class="toc toc-sidebar" aria-label="Table of contents" data-toc-collapse="expanded" data-toc-collapse-depth="3"></nav> </li> <li class=""> <a href="/choi-research/wiki/others/">Others</a> </li> </ul> </nav> </div> <div class="col-sm-9"> <div class="post wiki-content"> <header class="post-header"> <h1 class="post-title">Writing Tips</h1> <p class="post-description">Six principles for revising scientific and technical prose — applied as a unified pass, not a mechanical checklist.</p> </header> <article class="wiki-article"> <blockquote> <p>This is summary from</p> <ul> <li><a href="https://www.geoelements.org/wiki/#/writing" rel="external nofollow noopener" target="_blank">https://www.geoelements.org/wiki/#/writing</a></li> <li><a href="https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writingy" rel="external nofollow noopener" target="_blank">https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writing</a></li> </ul> </blockquote> <p>Rewrite scientific/technical prose so its structure matches how readers actually process text. The guiding idea: complexity of thought does not require impenetrability of expression. Apply these six principles as a unified revision pass, not a checklist to apply mechanically and separately — most sentences need 2–3 of them applied together.</p> <h2 id="the-six-principles">The Six Principles</h2> <h3 id="1-subject-verb-proximity">1. Subject-verb proximity</h3> <p>Readers need syntactic resolution as soon as they hit a subject. Don’t let long modifying clauses separate a subject from its verb — split the sentence or move the modifier elsewhere.</p> <ul> <li>Poor: <em>The largest of the instrument arrays installed along the embankment crest, a multi-depth piezometer string spanning 12 m of saturated clay beneath the toe, indicates that pore pressure dissipation is nearly complete.</em> </li> <li>Clear: <em>The largest instrument array is a multi-depth piezometer string at the embankment crest. It spans 12 m of saturated clay beneath the toe and indicates that pore pressure dissipation is nearly complete.</em> </li> </ul> <h3 id="2-stress-position-end-of-sentenceclause">2. Stress position (end of sentence/clause)</h3> <p>The end of a sentence is where readers place emphasis. Put the most important new information — the point you want to land — at the end, not flat background detail. Use colons/semicolons to create secondary stress positions within long sentences.</p> <ul> <li>Poor: <em>A peak friction angle of 36° was measured in dense Ottawa sand.</em> </li> <li> <p>Clear: <em>In dense Ottawa sand, the peak friction angle reached 36°.</em></p> </li> <li>Poor: <em>The factor of safety was 1.15 at the end of the third loading stage, when the embankment height reached 6 m.</em> </li> <li>Clear: <em>At the end of the third loading stage, when the embankment height reached 6 m, the factor of safety was 1.15.</em> </li> </ul> <h3 id="3-topic-position-start-of-sentenceclause">3. Topic position (start of sentence/clause)</h3> <p>The beginning of a sentence sets the perspective. Open with “old information” already established in prior sentences, to link backward and orient the reader, before introducing new material. Avoid opening every sentence with brand-new concepts — this disorients the reader.</p> <ul> <li>Poor: <em>The Mohr–Coulomb failure envelope intersects the effective stress path at the foundation toe. The embankment sits on 8 m of normally consolidated clay.</em> </li> <li> <p>Clear: <em>The embankment sits on 8 m of normally consolidated clay. At the foundation toe, the Mohr–Coulomb failure envelope intersects the effective stress path.</em></p> </li> <li>Poor: <em>CPT-based correlations predict liquefaction in the loose sand layer. The bridge abutment is founded on alluvial deposits at a depth of 4 m.</em> </li> <li>Clear: <em>The bridge abutment is founded on alluvial deposits at a depth of 4 m. CPT-based correlations predict liquefaction in the loose sand layer within those deposits.</em> </li> </ul> <h3 id="4-action-in-the-verb-avoid-nominalization">4. Action in the verb (avoid nominalization)</h3> <p>Find the real action of the sentence and make it the verb, not a noun. Nominalizations (<em>consolidation</em>, <em>determination</em>, <em>characterization</em>) force the actual verb to become weak (<em>is</em>, <em>occurs</em>, <em>involves</em>, <em>has</em>).</p> <ul> <li>Poor: <em>Determination of the coefficient of consolidation in the soft clay beneath the proposed footing was carried out using laboratory oedometer tests.</em> </li> <li> <p>Clear: <em>We measured the coefficient of consolidation in the soft clay beneath the proposed footing using laboratory oedometer tests.</em></p> </li> <li>Poor: <em>Characterization of the undrained shear strength of the Boston Blue Clay was based on unconsolidated-undrained triaxial tests.</em> </li> <li>Clear: <em>Unconsolidated-undrained triaxial tests characterized the undrained shear strength of the Boston Blue Clay.</em> </li> </ul> <h3 id="5-context-before-new-information">5. Context before new information</h3> <p>Never hand the reader a conclusion, result, or complex new concept before they have the framework to understand it. Order sentences/paragraphs so background and setup come before the new point that depends on it.</p> <ul> <li>Poor: <em>The predicted settlement exceeded the serviceability limit. The footing rests on a 5 m layer of compressible organic silt underlain by dense glacial till.</em> </li> <li> <p>Clear: <em>The footing rests on a 5 m layer of compressible organic silt underlain by dense glacial till. Under the design load, the predicted settlement exceeded the serviceability limit.</em></p> </li> <li>Poor: <em>Excess pore pressures at the base of the dam triggered a flow failure. The core material is a low-plasticity silt with a hydraulic conductivity of 10⁻⁸ m/s.</em> </li> <li>Clear: <em>The core material is a low-plasticity silt with a hydraulic conductivity of 10⁻⁸ m/s. During rapid reservoir filling, excess pore pressures at the base of the dam triggered a flow failure.</em> </li> </ul> <h3 id="6-active-voice-and-direct-verbs">6. Active voice and direct verbs</h3> <p>Use active voice by default — it’s more direct and assigns a clear actor to the action. Reserve passive voice for cases where the actor is genuinely unknown, irrelevant, or where keeping the existing topic in subject position (principle 3) requires it. When using active voice, also follow principles 1 and 4: bring subject and verb together, and make the verb the actual action.</p> <ul> <li>Poor: <em>The settlement of the footing was computed by the finite element model.</em> </li> <li> <p>Clear: <em>The finite element model computed 42 mm of footing settlement.</em></p> </li> <li>Poor: <em>Triaxial tests were performed by the researchers at three confining pressures to evaluate the stress path followed during excavation.</em> </li> <li>Clear: <em>We performed triaxial tests at three confining pressures to evaluate the stress path followed during excavation.</em> </li> </ul> <h2 id="references">References</h2> <ul> <li><a href="https://www.geoelements.org/wiki/#/writing" rel="external nofollow noopener" target="_blank">https://www.geoelements.org/wiki/#/writing</a></li> <li><a href="https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writingy" rel="external nofollow noopener" target="_blank">https://www.americanscientist.org/blog/the-long-view/the-science-of-scientific-writing</a></li> </ul> </article> </div> </div> </div> <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const ALERT_TYPES = {
+      NOTE: { class: "note", icon: "fa-circle-info", label: "Note" },
+      TIP: { class: "tip", icon: "fa-lightbulb", label: "Tip" },
+      IMPORTANT: { class: "important", icon: "fa-circle-exclamation", label: "Important" },
+      WARNING: { class: "warning", icon: "fa-triangle-exclamation", label: "Warning" },
+      CAUTION: { class: "caution", icon: "fa-circle-exclamation", label: "Caution" },
+    };
+
+    document.querySelectorAll(".wiki-article blockquote").forEach((blockquote) => {
+      const firstParagraph = blockquote.querySelector("p");
+      if (!firstParagraph) return;
+
+      const match = firstParagraph.textContent.trim().match(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*(.*)$/s);
+      if (!match) return;
+
+      const typeKey = match[1];
+      const config = ALERT_TYPES[typeKey];
+      if (!config) return;
+
+      const remainder = match[2].trim();
+      if (remainder) {
+        firstParagraph.textContent = remainder;
+      } else {
+        firstParagraph.remove();
+      }
+
+      blockquote.classList.add("markdown-alert", `markdown-alert-${config.class}`);
+
+      const title = document.createElement("p");
+      title.className = "markdown-alert-title";
+      title.innerHTML = `<i class="fa-solid ${config.icon}" aria-hidden="true"></i><span>${config.label}</span>`;
+      blockquote.insertBefore(title, blockquote.firstChild);
+    });
+  });
+</script> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Yongjin Choi. © 2025 Yongjin Choi. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/choi-research/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/choi-research/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/choi-research/assets/al_math/js/mathjax-setup.js"></script> <script defer src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6" crossorigin="anonymous"></script> <script src="/choi-research/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/choi-research/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/choi-research/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/choi-research/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/choi-research/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/choi-research/assets/al_img_tools/js/zoom.js"></script> <script defer src="/choi-research/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/choi-research/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/choi-research/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-home",
+    title: "home",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/choi-research/";
+    },
+  },{id: "nav-research",
+          title: "Research",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/choi-research/research/";
+          },
+        },{id: "dropdown-pi",
+              title: "PI",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/choi-research/team/";
+              },
+            },{id: "dropdown-members",
+              title: "Members",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/choi-research/team/members/";
+              },
+            },{id: "dropdown-openings",
+              title: "Openings",
+              description: "",
+              section: "Dropdown",
+              handler: () => {
+                window.location.href = "/choi-research/openings/";
+              },
+            },{id: "nav-publications",
+          title: "Publications",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/choi-research/publications/";
+          },
+        },{id: "nav-software",
+          title: "Software",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/choi-research/software/";
+          },
+        },{id: "nav-courses",
+          title: "Courses",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/choi-research/courses/";
+          },
+        },{id: "post-a-post-with-plotly-js",
+        
+          title: "a post with plotly.js",
+        
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2025/03/26/plotly.html";
+          
+        },
+      },{id: "post-a-post-with-image-galleries",
+        
+          title: "a post with image galleries",
+        
+        description: "this is what included image galleries could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/12/04/photo-gallery.html";
+          
+        },
+      },{id: "post-a-post-with-tabs",
+        
+          title: "a post with tabs",
+        
+        description: "this is what included tabs in a post could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/05/01/tabs.html";
+          
+        },
+      },{id: "post-a-post-with-typograms",
+        
+          title: "a post with typograms",
+        
+        description: "this is what included typograms code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/04/29/typograms.html";
+          
+        },
+      },{id: "post-a-post-that-can-be-cited",
+        
+          title: "a post that can be cited",
+        
+        description: "this is what a post that can be cited looks like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/04/28/post-citation.html";
+          
+        },
+      },{id: "post-a-post-with-pseudo-code",
+        
+          title: "a post with pseudo code",
+        
+        description: "this is what included pseudo code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/04/15/pseudocode.html";
+          
+        },
+      },{id: "post-a-post-with-code-diff",
+        
+          title: "a post with code diff",
+        
+        description: "this is how you can display code diffs",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/01/27/code-diff.html";
+          
+        },
+      },{id: "post-a-post-with-advanced-image-components",
+        
+          title: "a post with advanced image components",
+        
+        description: "this is what advanced image components could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/01/27/advanced-images.html";
+          
+        },
+      },{id: "post-a-post-with-vega-lite",
+        
+          title: "a post with vega lite",
+        
+        description: "this is what included vega lite code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/01/27/vega-lite.html";
+          
+        },
+      },{id: "post-a-post-with-geojson",
+        
+          title: "a post with geojson",
+        
+        description: "this is what included geojson code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/01/26/geojson-map.html";
+          
+        },
+      },{id: "post-a-post-with-echarts",
+        
+          title: "a post with echarts",
+        
+        description: "this is what included echarts code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/01/26/echarts.html";
+          
+        },
+      },{id: "post-a-post-with-chart-js",
+        
+          title: "a post with chart.js",
+        
+        description: "this is what included chart.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2024/01/26/chartjs.html";
+          
+        },
+      },{id: "post-a-post-with-tikzjax",
+        
+          title: "a post with TikZJax",
+        
+        description: "this is what included TikZ code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2023/12/12/tikzjax.html";
+          
+        },
+      },{id: "post-a-post-with-bibliography",
+        
+          title: "a post with bibliography",
+        
+        description: "an example of a blog post with bibliography",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2023/07/12/post-bibliography.html";
+          
+        },
+      },{id: "post-a-post-with-jupyter-notebook",
+        
+          title: "a post with jupyter notebook",
+        
+        description: "an example of a blog post with jupyter notebook",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2023/07/04/jupyter-notebook.html";
+          
+        },
+      },{id: "post-a-post-with-custom-blockquotes",
+        
+          title: "a post with custom blockquotes",
+        
+        description: "an example of a blog post with custom blockquotes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2023/05/12/custom-blockquotes.html";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
+        
+          title: "a post with table of contents on a sidebar",
+        
+        description: "an example of a blog post with table of contents on a sidebar",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2023/04/25/sidebar-table-of-contents.html";
+          
+        },
+      },{id: "post-a-post-with-audios",
+        
+          title: "a post with audios",
+        
+        description: "this is what included audios could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2023/04/25/audios.html";
+          
+        },
+      },{id: "post-a-post-with-videos",
+        
+          title: "a post with videos",
+        
+        description: "this is what included videos could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2023/04/24/videos.html";
+          
+        },
+      },{id: "post-displaying-beautiful-interactive-tables",
+        
+          title: "displaying beautiful interactive tables",
+        
+        description: "an example of how to use interactive tables in al-folio",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2023/03/20/tables.html";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents",
+        
+          title: "a post with table of contents",
+        
+        description: "an example of a blog post with table of contents",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2023/03/20/table-of-contents.html";
+          
+        },
+      },{id: "post-a-post-with-giscus-comments",
+        
+          title: "a post with giscus comments",
+        
+        description: "an example of a blog post with giscus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/external-services/2022/12/10/giscus-comments.html";
+          
+        },
+      },{id: "post-a-post-with-redirect",
+        
+          title: "a post with redirect",
+        
+        description: "you can also redirect to assets like pdf",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/assets/pdf/example_pdf.pdf";
+          
+        },
+      },{id: "post-a-post-with-diagrams",
+        
+          title: "a post with diagrams",
+        
+        description: "an example of a blog post with diagrams",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/2021/07/04/diagrams.html";
+          
+        },
+      },{id: "post-a-distill-style-blog-post",
+        
+          title: "a distill-style blog post",
+        
+        description: "an example of a distill-style blog post and main elements",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/2021/05/22/distill.html";
+          
+        },
+      },{id: "post-a-post-with-twitter",
+        
+          title: "a post with twitter",
+        
+        description: "an example of a blog post with twitter",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/external-services/2020/09/28/twitter.html";
+          
+        },
+      },{id: "post-a-post-with-disqus-comments",
+        
+          title: "a post with disqus comments",
+        
+        description: "an example of a blog post with disqus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/external-services/2015/10/20/disqus-comments.html";
+          
+        },
+      },{id: "post-a-post-with-math",
+        
+          title: "a post with math",
+        
+        description: "an example of a blog post with some math",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2015/10/20/math.html";
+          
+        },
+      },{id: "post-a-post-with-code",
+        
+          title: "a post with code",
+        
+        description: "an example of a blog post with some code",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2015/07/15/code.html";
+          
+        },
+      },{id: "post-a-post-with-images",
+        
+          title: "a post with images",
+        
+        description: "this is what included images could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2015/05/15/images.html";
+          
+        },
+      },{id: "post-a-post-with-formatting-and-links",
+        
+          title: "a post with formatting and links",
+        
+        description: "march &amp; april, looking forward to summer",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/choi-research/sample-posts/2015/03/15/formatting-and-links.html";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/choi-research/books/the_godfather.html";
+            },},{id: "news-we-re-hiring-geointelligence-is-recruiting-phd-students-and-postdoctoral-researchers-to-advance-ai-enhanced-computational-geotechnics-see-our-openings-for-details-and-how-to-apply",
+          title: 'We’re hiring! GeoIntelligence is recruiting PhD students and postdoctoral researchers to advance AI-enhanced...',
+          description: "",
+          section: "News",},{id: "projects-project-1",
+          title: 'project 1',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/1-project/";
+            },},{id: "projects-project-2",
+          title: 'project 2',
+          description: "a project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/2-project/";
+            },},{id: "projects-project-3-with-very-long-name",
+          title: 'project 3 with very long name',
+          description: "a project that redirects to another website",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/3-project/";
+            },},{id: "projects-project-4",
+          title: 'project 4',
+          description: "another without an image",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/4-project/";
+            },},{id: "projects-project-5",
+          title: 'project 5',
+          description: "a project with a background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/5-project/";
+            },},{id: "projects-project-6",
+          title: 'project 6',
+          description: "a project with no image",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/6-project/";
+            },},{id: "projects-project-7",
+          title: 'project 7',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/7-project/";
+            },},{id: "projects-project-8",
+          title: 'project 8',
+          description: "an other project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/8-project/";
+            },},{id: "projects-project-9",
+          title: 'project 9',
+          description: "another project with an image 🎉",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/9-project/";
+            },},{id: "projects-computer-vision-for-infrastructure-inspection-and-hazard-detection",
+          title: 'Computer vision for infrastructure inspection and hazard detection',
+          description: "Deep learning-based computer vision for automated defect detection and hazard assessment in civil infrastructure.",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/computer-vision/";
+            },},{id: "projects-inverse-analysis-for-granular-flows-using-differentiable-graph-network-simulator",
+          title: 'Inverse analysis for granular flows using differentiable graph network simulator',
+          description: "Gradient-based inverse analysis and inverse design with GNS + automatic differentiation (AD).",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/diff-gns/";
+            },},{id: "projects-graph-neural-network-simulators",
+          title: 'Graph neural network simulators',
+          description: "AI-accelerated generalizable surrogate models for efficient physics simulations using graph neural networks.",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/gns-granular-fluid-flows/";
+            },},{id: "projects-operator-learning-for-physics-informed-surrogate-for-geotechnical-analysis",
+          title: 'Operator learning for physics-informed surrogate for geotechnical analysis',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/operator-learning-geotech/";
+            },},{id: "projects-accelerating-uncertainty-quantifiations-in-geohazard-analysis",
+          title: 'Accelerating uncertainty quantifiations in geohazard analysis',
+          description: "Physics-aware AI simulators to accelerate probablistic analysis in geohazards",
+          section: "Projects",handler: () => {
+              window.location.href = "/choi-research/projects/rgns/";
+            },},{id: "wiki-code-of-conduct",
+          title: 'Code of Conduct',
+          description: "Expectations for respectful, inclusive, and productive collaboration in the lab.",
+          section: "Wiki",handler: () => {
+              window.location.href = "/choi-research/wiki/code-of-conduct/";
+            },},{id: "wiki-onboarding",
+          title: 'Onboarding',
+          description: "What to prepare when joining the lab and skills to build over time.",
+          section: "Wiki",handler: () => {
+              window.location.href = "/choi-research/wiki/onboarding/";
+            },},{id: "wiki-others",
+          title: 'Others',
+          description: "Miscellaneous resources, links, and lab conventions.",
+          section: "Wiki",handler: () => {
+              window.location.href = "/choi-research/wiki/others/";
+            },},{id: "wiki-writing-tips",
+          title: 'Writing Tips',
+          description: "Six principles for revising scientific and technical prose — applied as a unified pass, not a mechanical checklist.",
+          section: "Wiki",handler: () => {
+              window.location.href = "/choi-research/wiki/writing-tips/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/choi-research/assets/pdf/CV_ChoiYJ_27.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%79%6F%6E%67%6A%69%6E%63%68%6F%69@%75%6D%61%73%73.%65%64%75", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=xKixfUcAAAAJ", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/yjchoi1", "_blank");
+        },
+      },{
+        id: 'social-linkedin',
+        title: 'LinkedIn',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://www.linkedin.com/in/yjchoi1", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/choi-research/assets/al_search/js/shortcut-key.js"></script> </body> </html>
