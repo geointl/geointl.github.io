@@ -11,7 +11,31 @@
       max-width: 200px;
     }
   }
-</style> <p>Welcome to GeoIntelligence research group at UMass Amherst. We aim to advance the frontier of geotechnical engineering through AI-enhanced computational methods. Our research focuses on AI-enhanced physics simulation, differentiable inverse modeling, and agentic AI to enable geotechnical analyses beyond the capabilities of conventional approaches.</p> </div> <h2> <a href="/news/" style="color: inherit">news</a> </h2> <div class="news"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">Jul 08, 2026</th> <td> <strong>We’re hiring!</strong> GeoIntelligence is recruiting <strong>PhD students</strong> and <strong>postdoctoral researchers</strong> to advance AI-enhanced computational geotechnics. See our <a href="/openings/">openings</a> for details and how to apply. </td> </tr> </table> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Yongjin Choi. © 2025 Yongjin Choi. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
+
+  .home-social {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+
+  .home-social .contact-icons {
+    font-size: 1.4rem;
+  }
+
+  .home-social .contact-icons a {
+    margin-right: 0.7rem;
+    color: var(--global-text-color, #333);
+  }
+
+  .home-social .contact-icons a:hover {
+    color: var(--global-theme-color, #4285f4);
+  }
+
+  /* CV stays on Team/PI; hide only on home */
+  .home-social .contact-icons a[title="Cv pdf"] {
+    display: none;
+  }
+</style> <p>Welcome to GeoIntelligence research group at UMass Amherst. We aim to advance the frontier of geotechnical engineering through AI-enhanced computational methods. Our research focuses on AI-enhanced physics simulation, differentiable inverse modeling, and agentic AI to enable geotechnical analyses beyond the capabilities of conventional approaches.</p> <div class="home-social"> <div class="contact-icons"> <a href="/assets/pdf/CV_ChoiYJ_27.pdf" title="Cv pdf"><i class="ai ai-cv"></i></a> <a href="mailto:yongjinchoi@umass.edu" title="Email"><i class="fa-solid fa-envelope"></i></a> <a href="https://scholar.google.com/citations?user=xKixfUcAAAAJ" title="Scholar userid" rel="external nofollow noopener" target="_blank"><i class="ai ai-google-scholar"></i></a> <a href="https://github.com/yjchoi1" title="Github username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-github"></i></a> <a href="https://www.linkedin.com/in/yjchoi1" title="Linkedin username" rel="external nofollow noopener" target="_blank"><i class="fa-brands fa-linkedin"></i></a> </div> </div> </div> <h2> <a href="/news/" style="color: inherit">news</a> </h2> <div class="news"> <div class="table-responsive"> <table class="table table-sm table-borderless"> <tr> <th scope="row" style="width: 20%">Jul 08, 2026</th> <td> <strong>We’re hiring!</strong> GeoIntelligence is recruiting <strong>PhD students</strong> and <strong>postdoctoral researchers</strong> to advance AI-enhanced computational geotechnics. See our <a href="/openings/">openings</a> for details and how to apply. </td> </tr> </table> </div> </div> </article> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Yongjin Choi. © 2025 Yongjin Choi. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. </div> </footer> <script>
   window.alFolio = {
     compatBootstrap: false
   };
@@ -497,26 +521,6 @@ ninja.data = [{
           description: "Physics-aware AI simulators to accelerate probablistic analysis in geohazards",
           section: "Projects",handler: () => {
               window.location.href = "/projects/rgns/";
-            },},{id: "wiki-code-of-conduct",
-          title: 'Code of Conduct',
-          description: "Expectations for respectful, inclusive, and productive collaboration in the lab.",
-          section: "Wiki",handler: () => {
-              window.location.href = "/wiki/code-of-conduct/";
-            },},{id: "wiki-onboarding",
-          title: 'Onboarding',
-          description: "What to prepare when joining the lab and skills to build over time.",
-          section: "Wiki",handler: () => {
-              window.location.href = "/wiki/onboarding/";
-            },},{id: "wiki-others",
-          title: 'Others',
-          description: "Miscellaneous resources, links, and lab conventions.",
-          section: "Wiki",handler: () => {
-              window.location.href = "/wiki/others/";
-            },},{id: "wiki-writing-tips",
-          title: 'Writing Tips',
-          description: "Six principles for revising scientific and technical prose — applied as a unified pass, not a mechanical checklist.",
-          section: "Wiki",handler: () => {
-              window.location.href = "/wiki/writing-tips/";
             },},{
         id: 'social-cv',
         title: 'CV',
