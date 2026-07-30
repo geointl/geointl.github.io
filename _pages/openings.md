@@ -15,11 +15,12 @@ We are looking for PhD students with strong backgrounds in civil/geotechnical en
 [Apply here](https://docs.google.com/forms/d/e/1FAIpQLSfPEcLaFiBxC9wE1JjBHGdJfIjAhxkxplL1Kqr5Tkeig0FtuQ/viewform?usp=header){:target="_blank"}
 
 
+<!-- Postdoc positions (re-enable when recruiting again)
 ## Postdoc Positions
 
 We welcome applications from postdoctoral researchers with a PhD in geotechnical engineering, applied mechanics, or a related field. Candidates with expertise in machine learning, inverse problems, or agentic AI are especially encouraged to apply.
 
 [Apply here](https://docs.google.com/forms/d/e/1FAIpQLSf2LAIw7UdG0-ra8IzM43aSVzDdMq0kj_uZmNg3XgS1JxxZHA/viewform?usp=header){:target="_blank"}
-
+-->
 
 > **Questions?** If you have questions about our research, the application process, or whether you might be a good fit before applying, feel free to email us at [yongjinchoi@umass.edu](mailto:yongjinchoi@umass.edu).
