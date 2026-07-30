@@ -44,6 +44,14 @@ html[data-theme="dark"] {
   --global-hover-color: #{$brand-color};
 }
 
+// Soften the default near-black dark mode (#1c1c1d) a notch.
+html[data-theme="dark"] {
+  --global-bg-color: #2a2a2d;
+  --global-card-bg-color: #343438;
+  --global-code-bg-color: #36363c;
+  --global-divider-color: #4a4a50;
+}
+
 // Navbar labels use lowercase; page titles (h1) keep normal capitalization.
 .navbar-nav.navbar-menu-list > .nav-item > .nav-link {
   text-transform: lowercase;
