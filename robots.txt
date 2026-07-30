@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://geointl.github.io/choi-research/sitemap.xml
+Sitemap: https://geointl.github.io/sitemap.xml
