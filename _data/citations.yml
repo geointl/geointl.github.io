@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-03'
+  last_updated: '2026-08-10'
 papers:
   xKixfUcAAAAJ:2osOgNQ5qMEC:
     citations: 5
@@ -18,7 +18,7 @@ papers:
     title: Evaluation of py Curves for Group Piles in Cohesive Soil Based on 3D Numerical Analysis
     year: '2021'
   xKixfUcAAAAJ:4fKUyHm3Qg0C:
-    citations: 0
+    citations: 1
     title: A Hybrid GNN-FEM Framework for Phase-Field Fracture Simulation. Physics-Preserving Hybridization for Generalizable Surrogate Modeling
     year: '2026'
   xKixfUcAAAAJ:70eg2SAEIzsC:
@@ -58,7 +58,7 @@ papers:
     title: Prediction models based on regression and artificial neural network for moduli of layers constituted by open-graded aggregates
     year: '2021'
   xKixfUcAAAAJ:W7OEmFMy1HYC:
-    citations: 62
+    citations: 64
     title: Graph neural network-based surrogate model for granular flows
     year: '2024'
   xKixfUcAAAAJ:Wp0gIr-vW9MC:
@@ -106,7 +106,7 @@ papers:
     title: Evaluation of py curves and p-multiplier of pile groups corresponding to sand properties change based on 3D numerical analysis
     year: '2020'
   xKixfUcAAAAJ:r0BpntZqJG4C:
-    citations: 19
+    citations: 20
     title: Application of mask R-CNN and YOLOv8 algorithms for concrete crack detection
     year: '2024'
   xKixfUcAAAAJ:u9iWguZQMMsC:
