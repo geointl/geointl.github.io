@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-06-24'
+  last_updated: '2026-08-10'
 papers:
   xKixfUcAAAAJ:2osOgNQ5qMEC:
     citations: 5
@@ -10,19 +10,23 @@ papers:
     title: Field data-based prediction of local scour depth around bridge piers using interpretable machine learning
     year: '2025'
   xKixfUcAAAAJ:3s1wT3WcHBgC:
-    citations: 8
+    citations: 12
     title: "Tunnel lining segmentation from ground\u2010penetrating radar images using advanced single\u2010and two\u2010stage object detection and segmentation models"
     year: '2025'
   xKixfUcAAAAJ:4DMP91E08xMC:
     citations: 3
     title: Evaluation of py Curves for Group Piles in Cohesive Soil Based on 3D Numerical Analysis
     year: '2021'
+  xKixfUcAAAAJ:4fKUyHm3Qg0C:
+    citations: 1
+    title: A Hybrid GNN-FEM Framework for Phase-Field Fracture Simulation. Physics-Preserving Hybridization for Generalizable Surrogate Modeling
+    year: '2026'
   xKixfUcAAAAJ:70eg2SAEIzsC:
     citations: 4
     title: Differentiable graph neural network simulator for forward and inverse modeling of multi-layered slope system with multiple material properties
-    year: '2025'
+    year: '2026'
   xKixfUcAAAAJ:9yKSN-GCB0IC:
-    citations: 27
+    citations: 28
     title: Compaction quality monitoring of open-graded aggregates by light weight deflectometer and soil stiffness gauge
     year: '2020'
   xKixfUcAAAAJ:CHSYGLWDkRkC:
@@ -30,7 +34,7 @@ papers:
     title: The interplay between pore and particle characteristics in sands based on computed tomographic image analyses
     year: '2026'
   xKixfUcAAAAJ:HDshCWvjkbEC:
-    citations: 5
+    citations: 6
     title: Application of Mask R-CNN Algorithm to Detect Cracks in Concrete Structure
     year: '2024'
   xKixfUcAAAAJ:IWHjjKOFINEC:
@@ -44,9 +48,9 @@ papers:
   xKixfUcAAAAJ:K3LRdlH-MEoC:
     citations: 0
     title: Accelerating stochastic simulation of post-failure landslide runout using a random graph neural network-based simulator
-    year: Unknown Year
+    year: '2026'
   xKixfUcAAAAJ:KxtntwgDAa4C:
-    citations: 2
+    citations: 3
     title: 'Operator learning for consolidation: An architectural comparison for DeepONet variants'
     year: '2026'
   xKixfUcAAAAJ:Tyk-4Ss8FVUC:
@@ -54,11 +58,11 @@ papers:
     title: Prediction models based on regression and artificial neural network for moduli of layers constituted by open-graded aggregates
     year: '2021'
   xKixfUcAAAAJ:W7OEmFMy1HYC:
-    citations: 58
+    citations: 64
     title: Graph neural network-based surrogate model for granular flows
     year: '2024'
   xKixfUcAAAAJ:Wp0gIr-vW9MC:
-    citations: 17
+    citations: 18
     title: Inverse analysis of granular flows using differentiable graph neural network simulator
     year: '2024'
   xKixfUcAAAAJ:YFjsv_pBGBYC:
@@ -70,9 +74,9 @@ papers:
     title: A machine learning approach to predicting pore pressure response in liquefiable sands under cyclic loading
     year: '2023'
   xKixfUcAAAAJ:aqlVkmm33-oC:
-    citations: 5
+    citations: 4
     title: Three-dimensional granular flow simulation using graph neural network-based learned simulator
-    year: '2023'
+    year: '2024'
   xKixfUcAAAAJ:d1gkVwhDpl0C:
     citations: 2
     title: Resilient Modulus and Permanent Deformation of 40-mm Open-Graded Aggregates based on Repeated-Load Triaxial Tests
@@ -86,7 +90,7 @@ papers:
     title: Development of a data acquisition system for lightweight deflectometer using Raspberry Pi
     year: Unknown Year
   xKixfUcAAAAJ:hC7cP41nSMkC:
-    citations: 25
+    citations: 29
     title: 'Sequence deep learning for seismic ground response modeling: 1D-CNN, LSTM, and transformer approach'
     year: '2024'
   xKixfUcAAAAJ:l7t_Zn2s7bgC:
@@ -102,8 +106,8 @@ papers:
     title: Evaluation of py curves and p-multiplier of pile groups corresponding to sand properties change based on 3D numerical analysis
     year: '2020'
   xKixfUcAAAAJ:r0BpntZqJG4C:
-    citations: 18
-    title: Application of Mask R-CNN and YOLOv8 algorithms for concrete crack detection
+    citations: 20
+    title: Application of mask R-CNN and YOLOv8 algorithms for concrete crack detection
     year: '2024'
   xKixfUcAAAAJ:u9iWguZQMMsC:
     citations: 0
