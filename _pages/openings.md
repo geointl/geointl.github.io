@@ -10,9 +10,9 @@ We are actively recruiting motivated researchers to join **GeoIntelligence** at 
 
 ## PhD Positions
 
-We are looking for PhD students with strong backgrounds in civil/geotechnical engineering, computational mechanics, or machine learning. Experience with numerical methods or scientific computing is a plus.
+We welcome PhD applicants who want to work at the intersection of computational geotechnics and AI/ML. Background in numerical methods, differentiable programming (PyTorch, JAX, or similar), or high-performance computing is a plus. An MS in civil engineering or a related field is preferred.
 
-[Apply here](https://docs.google.com/forms/d/e/1FAIpQLSfPEcLaFiBxC9wE1JjBHGdJfIjAhxkxplL1Kqr5Tkeig0FtuQ/viewform?usp=header){:target="_blank"}
+[Submit group interest form](https://docs.google.com/forms/d/e/1FAIpQLSfPEcLaFiBxC9wE1JjBHGdJfIjAhxkxplL1Kqr5Tkeig0FtuQ/viewform?usp=header){:target="_blank"}
 
 
 <!-- Postdoc positions (re-enable when recruiting again)
@@ -23,4 +23,4 @@ We welcome applications from postdoctoral researchers with a PhD in geotechnical
 [Apply here](https://docs.google.com/forms/d/e/1FAIpQLSf2LAIw7UdG0-ra8IzM43aSVzDdMq0kj_uZmNg3XgS1JxxZHA/viewform?usp=header){:target="_blank"}
 -->
 
-> **Questions?** If you have questions about our research, the application process, or whether you might be a good fit before applying, feel free to email us at [yongjinchoi@umass.edu](mailto:yongjinchoi@umass.edu).
+> **Questions?** If you have questions about our research, the application process, or whether you might be a good fit to our group, feel free to email us at [yongjinchoi@umass.edu](mailto:yongjinchoi@umass.edu).
