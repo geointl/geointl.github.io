@@ -21,7 +21,7 @@ This repository contains a Python implementation of a 2D finite element method (
 
 While many open-source Material Point Method (MPM) codes utilize modularization for robust development and maintenance, their sophisticated structure can make it challenging for beginners to follow the core computational cycle of MPM. This online notebook simplifies the learning process by introducing the fundamental principles of MPM and implementing its essential algorithms in a simple, sequential manner. It also includes hands-on coding examples for simulating elastic ball collisions and granular column collapse, offering an accessible entry point for MPM beginners.
 
-[<i class="fa-solid fa-book-open fa-sm"></i> Get started](https://www.geoelements.org/LearnMPM/intro.html){:target="_blank"}
+[<i class="fa-solid fa-book-open fa-sm"></i> Get started](https://yjchoi1.github.io/learn-mpm-2d/main_page.html){:target="_blank"}
 
 ### Regression and classification with machine learning
 
