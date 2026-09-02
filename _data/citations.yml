@@ -1,16 +1,16 @@
 metadata:
-  last_updated: '2026-08-10'
+  last_updated: '2026-09-02'
 papers:
   xKixfUcAAAAJ:2osOgNQ5qMEC:
     citations: 5
     title: Elastic modulus and layer coefficient of permeable block pavements based on plate load tests
     year: '2017'
   xKixfUcAAAAJ:35N4QoGY0k4C:
-    citations: 11
+    citations: 12
     title: Field data-based prediction of local scour depth around bridge piers using interpretable machine learning
     year: '2025'
   xKixfUcAAAAJ:3s1wT3WcHBgC:
-    citations: 12
+    citations: 13
     title: "Tunnel lining segmentation from ground\u2010penetrating radar images using advanced single\u2010and two\u2010stage object detection and segmentation models"
     year: '2025'
   xKixfUcAAAAJ:4DMP91E08xMC:
@@ -18,7 +18,7 @@ papers:
     title: Evaluation of py Curves for Group Piles in Cohesive Soil Based on 3D Numerical Analysis
     year: '2021'
   xKixfUcAAAAJ:4fKUyHm3Qg0C:
-    citations: 1
+    citations: 2
     title: A Hybrid GNN-FEM Framework for Phase-Field Fracture Simulation. Physics-Preserving Hybridization for Generalizable Surrogate Modeling
     year: '2026'
   xKixfUcAAAAJ:70eg2SAEIzsC:
@@ -50,7 +50,7 @@ papers:
     title: Accelerating stochastic simulation of post-failure landslide runout using a random graph neural network-based simulator
     year: '2026'
   xKixfUcAAAAJ:KxtntwgDAa4C:
-    citations: 3
+    citations: 4
     title: 'Operator learning for consolidation: An architectural comparison for DeepONet variants'
     year: '2026'
   xKixfUcAAAAJ:Tyk-4Ss8FVUC:
@@ -58,7 +58,7 @@ papers:
     title: Prediction models based on regression and artificial neural network for moduli of layers constituted by open-graded aggregates
     year: '2021'
   xKixfUcAAAAJ:W7OEmFMy1HYC:
-    citations: 64
+    citations: 67
     title: Graph neural network-based surrogate model for granular flows
     year: '2024'
   xKixfUcAAAAJ:Wp0gIr-vW9MC:
@@ -82,7 +82,7 @@ papers:
     title: Resilient Modulus and Permanent Deformation of 40-mm Open-Graded Aggregates based on Repeated-Load Triaxial Tests
     year: '2019'
   xKixfUcAAAAJ:dhFuZR0502QC:
-    citations: 13
+    citations: 14
     title: Accelerating particle and fluid simulations with differentiable graph networks for solving forward and inverse problems
     year: '2023'
   xKixfUcAAAAJ:dshw04ExmUIC:
@@ -90,7 +90,7 @@ papers:
     title: Development of a data acquisition system for lightweight deflectometer using Raspberry Pi
     year: Unknown Year
   xKixfUcAAAAJ:hC7cP41nSMkC:
-    citations: 29
+    citations: 31
     title: 'Sequence deep learning for seismic ground response modeling: 1D-CNN, LSTM, and transformer approach'
     year: '2024'
   xKixfUcAAAAJ:l7t_Zn2s7bgC:
