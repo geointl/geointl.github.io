@@ -258,6 +258,7 @@ exclude:
   - readme_preview/
   - gems/
   - migrations/
+  - my_notes/
   - vendor
 keep_files:
   - CNAME

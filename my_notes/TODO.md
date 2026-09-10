@@ -1,0 +1,1 @@
+[] make research keywords to be linked shared tags so that if I click the keyword, we can retrieve a page that shows the contents associated with that tag.
