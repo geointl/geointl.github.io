@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Accelerating uncertainty quantifiations in geohazard analysis
+title: Accelerating uncertainty quantifications in geohazard analysis
 description: Physics-aware AI simulators to accelerate probablistic analysis in geohazards
 importance: 1
 category: work

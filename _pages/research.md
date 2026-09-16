@@ -8,8 +8,8 @@ nav_order: 1
 ---
 
 
-## AI-enhanced simultion
-Numerical simulation is a fundamental tool in geomechanics. High‑fidelity numerical methods (e.g., FEM, MPM) are computationally expensive, which limits their use in large‑scale parametric studies, optimization, and uncertainty quantification. Simplified or empirical models offer faster results but often sacrifice accuracy and generality. We leverage AI to develop physics simulators that are fast yet remain accurate and generalizable, enabling more sophisticated and advanced geomechanical analyses.
+## AI-enhanced simulation
+Numerical simulation is a fundamental tool in geomechanics. High-fidelity numerical methods (e.g., FEM, MPM) are computationally expensive, which limits their use in large-scale parametric studies, optimization, and uncertainty quantification. Simplified or empirical models offer faster results but often sacrifice accuracy and generality. We leverage AI to develop physics simulators that are fast yet remain accurate and generalizable, enabling more sophisticated and advanced geomechanical analyses.
 
 **Related topics:**
 * [AI-enhanced simulation with graph neural networks]({{ '/projects/gns-granular-fluid-flows/' | relative_url }})
@@ -28,11 +28,11 @@ Numerical simulation is a fundamental tool in geomechanics. High‑fidelity nume
 </p>
 
 ## Inverse modeling and uncertainty quantification
-AI-enhanced simulators make computationally demanding geotechnical analyses, such as inverse modeling and reliability analysis, more practical. By combining physics-aware learned simulators with differentiable programming, we develop efficient frameworks for system identification, design optimization, model discovery, and uncertainty quantification. This enables large-scale optimization and probabilistic analyses that are difficult to achieve with conventional numerical methods. Ultimately, this aims to support more reliable engineering analysis and decision-making.
+AI-enhanced simulators make computationally demanding geotechnical analyses, such as inverse modeling and reliability analysis, more practical. By combining physics-aware learned simulators with differentiable programming, we develop efficient frameworks for system identification, design optimization, model discovery, and uncertainty quantification. This enables large-scale optimization and probabilistic analyses that are difficult to achieve with conventional numerical methods. Ultimately, we aim to support more reliable engineering analysis and decision-making.
 
-**Related topics**
+**Related topics:**
 * [Differentiable graph neural network simulators for granular flows]({{ '/projects/diff-gns/' | relative_url }})
-* [Accelerating uncertainty quantifiations in geohazard analysis]({{ '/projects/rgns/' | relative_url }})
+* [Accelerating uncertainty quantifications in geohazard analysis]({{ '/projects/rgns/' | relative_url }})
 
 <p class="post-tags">
   <a href="{{ 'differentiable-programming' | slugify | prepend: '/projects/tag/' | relative_url }}"><i class="fa-solid fa-hashtag fa-sm"></i> differentiable-programming</a>
