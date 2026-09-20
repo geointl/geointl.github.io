@@ -10,7 +10,7 @@ We are actively recruiting motivated researchers to join **GeoIntelligence** at 
 
 ## PhD Positions
 
-We welcome PhD applicants who want to work at the intersection of computational geotechnics and AI/ML. Background in numerical methods, differentiable programming (PyTorch, JAX, or similar), or high-performance computing is a plus. An MS in civil engineering or a related field is preferred.
+We welcome PhD applicants who want to work at the intersection of computational geotechnics and AI/ML. Background in numerical methods, differentiable programming (PyTorch, JAX, or similar), or high-performance computing is a plus. An MS in civil engineering or a related field (completed or expected) is preferred.
 
 [Submit group interest form](https://docs.google.com/forms/d/e/1FAIpQLSfPEcLaFiBxC9wE1JjBHGdJfIjAhxkxplL1Kqr5Tkeig0FtuQ/viewform?usp=header){:target="_blank"}
 
