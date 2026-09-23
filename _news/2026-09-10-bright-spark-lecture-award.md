@@ -10,9 +10,6 @@ related_posts: false
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/news/bright-spark-ceremony.jpg" title="Bright Spark Lecture Award ceremony at FOMLIG 2026" class="img-fluid rounded" zoomable=true %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/news/bright-spark-certificate.jpg" title="ISSMGE Bright Spark Lecture Award certificate" class="img-fluid rounded" zoomable=true %}
     </div>
 </div>
