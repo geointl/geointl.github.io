@@ -15,7 +15,7 @@ layout: default
 ></script>
 
 <style>
-  .wiki-sidebar {
+  .guide-sidebar {
     position: sticky;
     top: 5.5rem;
     max-height: calc(100vh - 6.5rem);
@@ -24,7 +24,7 @@ layout: default
     border-right: 1px solid var(--global-divider-color, #dee2e6);
   }
 
-  .wiki-nav-label {
+  .guide-nav-label {
     margin: 0 0 0.75rem;
     padding: 0 0.75rem;
     font-size: 0.6875rem;
@@ -34,17 +34,17 @@ layout: default
     color: var(--global-text-color-light, #6c757d);
   }
 
-  .wiki-nav {
+  .guide-nav {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  .wiki-nav > li {
+  .guide-nav > li {
     margin-bottom: 0.125rem;
   }
 
-  .wiki-nav > li > a {
+  .guide-nav > li > a {
     display: block;
     padding: 0.45rem 0.75rem;
     border-left: 2px solid transparent;
@@ -60,26 +60,26 @@ layout: default
       border-color 0.15s ease;
   }
 
-  .wiki-nav > li > a:hover {
+  .guide-nav > li > a:hover {
     background: color-mix(in srgb, var(--global-theme-color, #4285f4) 6%, transparent);
     color: var(--global-theme-color, #4285f4);
   }
 
-  .wiki-nav > li.active > a {
+  .guide-nav > li.active > a {
     background: color-mix(in srgb, var(--global-theme-color, #4285f4) 10%, transparent);
     border-left-color: var(--global-theme-color, #4285f4);
     color: var(--global-theme-color, #4285f4);
     font-weight: 600;
   }
 
-  .wiki-nav .toc-sidebar {
+  .guide-nav .toc-sidebar {
     margin: 0.25rem 0 1rem;
     padding-left: 0;
     font-size: 0.8125rem;
     position: static !important;
   }
 
-  .wiki-nav li.active .toc-sidebar::before {
+  .guide-nav li.active .toc-sidebar::before {
     content: "On this page";
     display: block;
     margin: 0.5rem 0 0.35rem 0.75rem;
@@ -90,13 +90,13 @@ layout: default
     color: var(--global-text-color-light, #6c757d);
   }
 
-  .wiki-nav .toc-sidebar .toc-list {
+  .guide-nav .toc-sidebar .toc-list {
     margin: 0 0 0 0.75rem;
     padding-left: 0.75rem;
     border-left: 1px solid var(--global-divider-color, #dee2e6);
   }
 
-  .wiki-nav .toc-sidebar .toc-link {
+  .guide-nav .toc-sidebar .toc-link {
     color: var(--global-text-color-light, #6c757d);
     text-decoration: none;
     display: block;
@@ -108,23 +108,23 @@ layout: default
       background-color 0.15s ease;
   }
 
-  .wiki-nav .toc-sidebar .toc-link:hover {
+  .guide-nav .toc-sidebar .toc-link:hover {
     color: var(--global-theme-color, #4285f4);
     background: color-mix(in srgb, var(--global-theme-color, #4285f4) 6%, transparent);
   }
 
-  .wiki-nav .toc-sidebar .toc-link.is-active-link {
+  .guide-nav .toc-sidebar .toc-link.is-active-link {
     color: var(--global-theme-color, #4285f4);
     font-weight: 600;
   }
 
-  .wiki-content .post-header {
+  .guide-content .post-header {
     margin-bottom: 2rem;
     padding-bottom: 1.25rem;
     border-bottom: 1px solid var(--global-divider-color, #dee2e6);
   }
 
-  .wiki-content .post-title {
+  .guide-content .post-title {
     margin-bottom: 0.625rem;
     font-size: 2rem;
     font-weight: 400;
@@ -132,28 +132,28 @@ layout: default
     letter-spacing: -0.01em;
   }
 
-  .wiki-content .post-description {
+  .guide-content .post-description {
     margin-bottom: 0;
     font-size: 1.0625rem;
     line-height: 1.6;
     color: var(--global-text-color-light, #6c757d);
   }
 
-  .wiki-article {
+  .guide-article {
     max-width: 48rem;
     font-size: 0.9375rem;
     line-height: 1.75;
   }
 
-  .wiki-article > :first-child {
+  .guide-article > :first-child {
     margin-top: 0;
   }
 
-  .wiki-article p {
+  .guide-article p {
     margin-bottom: 1.25rem;
   }
 
-  .wiki-article h2 {
+  .guide-article h2 {
     margin-top: 2.5rem;
     margin-bottom: 1rem;
     padding-top: 0.75rem;
@@ -163,13 +163,13 @@ layout: default
     border-top: 1px solid var(--global-divider-color, #dee2e6);
   }
 
-  .wiki-article h2:first-child {
+  .guide-article h2:first-child {
     margin-top: 0;
     padding-top: 0;
     border-top: none;
   }
 
-  .wiki-article h3 {
+  .guide-article h3 {
     margin-top: 1.75rem;
     margin-bottom: 0.75rem;
     font-size: 1.125rem;
@@ -177,7 +177,7 @@ layout: default
     line-height: 1.35;
   }
 
-  .wiki-article h4 {
+  .guide-article h4 {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     font-size: 1rem;
@@ -185,33 +185,33 @@ layout: default
     line-height: 1.4;
   }
 
-  .wiki-article ul,
-  .wiki-article ol {
+  .guide-article ul,
+  .guide-article ol {
     margin-top: 0;
     margin-bottom: 1.25rem;
     padding-left: 1.625rem;
   }
 
-  .wiki-article li {
+  .guide-article li {
     margin-bottom: 0.375rem;
   }
 
-  .wiki-article li:last-child {
+  .guide-article li:last-child {
     margin-bottom: 0;
   }
 
-  .wiki-article hr {
+  .guide-article hr {
     margin: 2rem 0;
   }
 
-  .wiki-article code {
+  .guide-article code {
     font-size: 0.875em;
     padding: 0.125rem 0.35rem;
     border-radius: 0.2rem;
     background: color-mix(in srgb, var(--global-text-color, #333) 6%, transparent);
   }
 
-  .wiki-article pre {
+  .guide-article pre {
     margin: 1.25rem 0;
     padding: 0.875rem 1rem;
     border-radius: 0.375rem;
@@ -219,17 +219,17 @@ layout: default
     background: color-mix(in srgb, var(--global-text-color, #333) 6%, transparent);
   }
 
-  .wiki-article pre code {
+  .guide-article pre code {
     padding: 0;
     background: transparent;
   }
 
-  .wiki-article table:not(.table) {
+  .guide-article table:not(.table) {
     margin: 1.25rem 0;
   }
 
   /* Muted blockquotes (attributions, asides — not admonitions) */
-  .wiki-article blockquote:not(.markdown-alert) {
+  .guide-article blockquote:not(.markdown-alert) {
     margin: 1rem 0 1.5rem;
     padding: 0.625rem 0 0.625rem 0.875rem;
     border: none;
@@ -241,35 +241,35 @@ layout: default
     color: var(--global-text-color-light, #6c757d);
   }
 
-  .wiki-article blockquote:not(.markdown-alert) p,
-  .wiki-article blockquote:not(.markdown-alert) li {
+  .guide-article blockquote:not(.markdown-alert) p,
+  .guide-article blockquote:not(.markdown-alert) li {
     margin-bottom: 0.5rem;
     color: var(--global-text-color-light, #6c757d);
   }
 
-  .wiki-article blockquote:not(.markdown-alert) p:last-child,
-  .wiki-article blockquote:not(.markdown-alert) li:last-child {
+  .guide-article blockquote:not(.markdown-alert) p:last-child,
+  .guide-article blockquote:not(.markdown-alert) li:last-child {
     margin-bottom: 0;
   }
 
-  .wiki-article blockquote:not(.markdown-alert) a {
+  .guide-article blockquote:not(.markdown-alert) a {
     color: var(--global-text-color-light, #6c757d);
     text-decoration: underline;
     text-decoration-color: color-mix(in srgb, var(--global-text-color-light, #6c757d) 45%, transparent);
   }
 
-  .wiki-article blockquote:not(.markdown-alert) a:hover {
+  .guide-article blockquote:not(.markdown-alert) a:hover {
     color: var(--global-theme-color, #4285f4);
     text-decoration-color: currentColor;
   }
 
-  .wiki-article blockquote:not(.markdown-alert) ul {
+  .guide-article blockquote:not(.markdown-alert) ul {
     margin: 0.375rem 0 0;
     padding-left: 1.25rem;
   }
 
   /* Material-style admonitions */
-  .wiki-article blockquote.markdown-alert {
+  .guide-article blockquote.markdown-alert {
     margin: 1.5rem 0;
     padding: 0.75rem 1rem;
     border: none;
@@ -349,7 +349,7 @@ layout: default
   }
 
   @media (max-width: 575.98px) {
-    .wiki-sidebar {
+    .guide-sidebar {
       position: static;
       max-height: none;
       margin-bottom: 1.5rem;
@@ -358,25 +358,25 @@ layout: default
       padding-bottom: 1rem;
     }
 
-    .wiki-content .post-title {
+    .guide-content .post-title {
       font-size: 1.625rem;
     }
   }
 </style>
 
-{% assign wiki_pages = site.wiki | sort: 'nav_order' %}
+{% assign guide_pages = site.guide | sort: 'nav_order' %}
 {% assign is_overview = false %}
-{% if page.url == '/wiki/' or page.url == '/wiki/index.html' %}
+{% if page.url == '/guide/' or page.url == '/guide/index.html' %}
   {% assign is_overview = true %}
 {% endif %}
 
-<div class="row wiki-layout">
+<div class="row guide-layout">
   <div class="col-sm-3">
-    <nav class="wiki-sidebar" aria-label="Lab Wiki navigation">
-      <p class="wiki-nav-label">Lab Wiki</p>
-      <ul class="wiki-nav">
+    <nav class="guide-sidebar" aria-label="Lab Guide navigation">
+      <p class="guide-nav-label">Lab Guide</p>
+      <ul class="guide-nav">
         <li class="{% if is_overview %}active{% endif %}">
-          <a href="{{ '/wiki/' | relative_url }}">Overview</a>
+          <a href="{{ '/guide/' | relative_url }}">Overview</a>
           {% if is_overview %}
             <nav
               id="toc-sidebar"
@@ -387,7 +387,7 @@ layout: default
             ></nav>
           {% endif %}
         </li>
-        {% for doc in wiki_pages %}
+        {% for doc in guide_pages %}
           <li class="{% if page.url == doc.url %}active{% endif %}">
             <a href="{{ doc.url | relative_url }}">{{ doc.title }}</a>
             {% if page.url == doc.url %}
@@ -406,14 +406,14 @@ layout: default
   </div>
 
   <div class="col-sm-9">
-    <div class="post wiki-content">
+    <div class="post guide-content">
       <header class="post-header">
         <h1 class="post-title">{{ page.title }}</h1>
         {% if page.description %}
           <p class="post-description">{{ page.description }}</p>
         {% endif %}
       </header>
-      <article class="wiki-article">
+      <article class="guide-article">
         {{ content }}
       </article>
     </div>
@@ -430,7 +430,7 @@ layout: default
       CAUTION: { class: "caution", icon: "fa-circle-exclamation", label: "Caution" },
     };
 
-    document.querySelectorAll(".wiki-article blockquote").forEach((blockquote) => {
+    document.querySelectorAll(".guide-article blockquote").forEach((blockquote) => {
       const firstParagraph = blockquote.querySelector("p");
       if (!firstParagraph) return;
 

@@ -209,9 +209,9 @@ collections:
     permalink: /projects/:name/
   teachings:
     output: true
-  wiki:
+  guide:
     output: true
-    permalink: /wiki/:name/
+    permalink: /guide/:name/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -319,9 +319,9 @@ defaults:
       sitemap: false
   - scope:
       path: ""
-      type: wiki
+      type: guide
     values:
-      layout: wiki
+      layout: guide
 
 sass:
   style: compressed
