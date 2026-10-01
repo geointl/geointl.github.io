@@ -70,10 +70,11 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
       - name: Build CV PDF 📄
-        # Same command as locally (`cd cv && latexmk`); writes assets/pdf/CV_ChoiYJ.pdf
+        # Same command as locally (`cd cv && latexmk`); writes assets/pdf/CV_ChoiYJ.pdf.
+        # Pinned to TeX Live 2023: newer releases replace the Source Serif Pro fonts the CV uses.
         run: |
           docker run --rm -u "$(id -u):$(id -g)" -e HOME=/tmp -v "$PWD:/work" -w /work/cv \
-            texlive/texlive:latest latexmk
+            texlive/texlive:TL2023-historic latexmk
           test -s assets/pdf/CV_ChoiYJ.pdf
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
