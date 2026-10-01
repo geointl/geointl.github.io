@@ -234,6 +234,7 @@ kramdown:
 include: ["_pages"]
 exclude:
   - .agents/
+  - cv/
   - .codex/
   - .claude/
   - al-folio-upgrade-report.md
@@ -374,8 +375,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Yongjin]
-  first_name: [Choi]
+  last_name: [Choi]
+  first_name: [Yongjin, Y.]
 
   style: apa
   locale: en
@@ -415,6 +416,7 @@ filtered_bibtex_keywords:
     altmetric,
     annotation,
     arxiv,
+    author+an,
     award,
     award_name,
     bibtex_show,
@@ -426,12 +428,15 @@ filtered_bibtex_keywords:
     hal,
     html,
     inspirehep_id,
+    keywords,
     pdf,
     pmid,
     poster,
     preview,
+    pubstate,
     selected,
     slides,
+    submittedto,
     supp,
     video,
     website,

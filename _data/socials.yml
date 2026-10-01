@@ -2,12 +2,13 @@
 # the socials will be displayed in the order they are defined here
 # for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
 # TODO: update
-cv_pdf: /assets/pdf/CV_ChoiYJ_27.pdf
+cv_pdf: /assets/pdf/CV_ChoiYJ.pdf
 # TODO: update
 email: yongjinchoi@umass.edu # your email address
 # inspirehep_id: 1010907 # Inspire HEP author ID
 # rss_icon: false # comment this line to hide the RSS icon
 scholar_userid: xKixfUcAAAAJ # your Google Scholar ID
+orcid_id: 0000-0002-3253-7924 # your ORCID ID (also used by bin/check_new_publications.py)
 github_username: yjchoi1
 linkedin_username: yjchoi1
 # wechat_qr: # filename of your wechat qr-code saved as an image (e.g., wechat-qr.png if saved to assets/img/wechat-qr.png)

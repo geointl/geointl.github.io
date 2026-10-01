@@ -1,0 +1,40 @@
+name: Check for new publications
+
+# Weekly check of ORCID, OpenAlex, and the cached Google Scholar titles for
+# papers missing from _bibliography/papers.bib. New entries arrive as a pull
+# request to review; merging it updates both the website and the CV PDF.
+# Requires: Settings > Actions > General > "Allow GitHub Actions to create and
+# approve pull requests".
+
+on:
+  schedule:
+    - cron: "0 9 * * 1" # Monday
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Install dependencies
+        run: pip install pyyaml
+      - name: Look for publications missing from papers.bib
+        run: |
+          python bin/check_new_publications.py --write --report "$RUNNER_TEMP/new_publications.md"
+          cat "$RUNNER_TEMP/new_publications.md" >> "$GITHUB_STEP_SUMMARY"
+      - name: Open or update the pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: bot/new-publications
+          delete-branch: true
+          add-paths: _bibliography/papers.bib
+          commit-message: "Add newly found publications"
+          title: "New publications found"
+          body-path: ${{ runner.temp }}/new_publications.md

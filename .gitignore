@@ -9,7 +9,21 @@ _site
 .tweet-cache
 .venv
 assets/libs/
-assets/rendercv/rendercv_output/*.typ
+cv/build/
+# LaTeX files from editor builds that ignore cv/latexmkrc (e.g., LaTeX Workshop)
+cv/*.aux
+cv/*.bbl
+cv/*.bcf
+cv/*.blg
+cv/*.fdb_latexmk
+cv/*.fls
+cv/*.log
+cv/*.out
+cv/*.pdf
+cv/*.run.xml
+cv/*.synctex.gz
+# CV PDF is built from cv/ (locally by latexmk, on deploy by GitHub Actions)
+assets/pdf/CV_ChoiYJ.pdf
 al-folio-upgrade-report.md
 node_modules/
 output/playwright/
