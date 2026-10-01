@@ -1,0 +1,43 @@
+% Curriculum vitae -- Yongjin Choi
+% Build:  cd cv && latexmk      (output: ../assets/pdf/CV_ChoiYJ.pdf)
+% Formatting lives in cvstyle.sty; content lives in sections/*.tex and the .bib files.
+\documentclass[10pt]{article}
+\usepackage{cvstyle}
+
+% Bibliography sources (see README.md for which file a paper goes in).
+\addbibresource{../_bibliography/papers.bib}  % published papers and public preprints (also on the website)
+\addbibresource{manuscripts.bib}              % manuscripts under review, not public yet (CV only)
+\addbibresource{presentations.bib}            % conference presentations (CV only)
+
+% --- Header -----------------------------------------------------------------
+% Leave a field empty ({}) to hide it.
+\cvname{Yongjin Choi}
+\cvtitle{Assistant Professor}
+\cvdepartment{Department of Civil and Environmental Engineering}
+\cvinstitution{University of Massachusetts Amherst}
+\cvemail{yongjinchoi@umass.edu}
+\cvwebsite{geointl.github.io}
+
+% Name to bold in author lists (family name, full given name as in the .bib).
+\cvselfname{Choi}{Yongjin}
+
+\begin{document}
+\nocite{*}
+\makecvheader
+
+% --- Sections -----------------------------------------------------------------
+% One line per section. Reorder by moving lines; hide by commenting out.
+\input{sections/education}
+\input{sections/appointments}
+\input{sections/publications}
+\input{sections/presentations}
+\input{sections/awards}
+\input{sections/teaching}
+% \input{sections/mentoring}   % placeholder: uncomment once there are entries
+% \input{sections/funding}     % placeholder: uncomment once there are entries
+\input{sections/talks}
+\input{sections/service}
+\input{sections/software}
+\input{sections/licenses}
+
+\end{document}

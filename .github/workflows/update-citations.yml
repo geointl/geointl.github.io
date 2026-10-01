@@ -58,6 +58,7 @@ jobs:
           else
             echo "❌ Citation update script failed with exit code $status (started at $start_time, ended at $end_time)."
             echo "❌ Citation update script failed with exit code $status." >> $GITHUB_STEP_SUMMARY
+            echo "::warning title=Google Scholar citations not updated::update_scholar_citations.py exited with code $status (see the log of this step)."
           fi
           set -e
 

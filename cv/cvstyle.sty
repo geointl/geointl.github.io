@@ -1,0 +1,346 @@
+% cvstyle.sty -- every formatting rule of the CV lives in this file.
+% Content files (sections/*.tex, *.bib) contain no formatting code; they only
+% use the commands documented below. Change the look here, once.
+%
+%   Header      \cvname \cvtitle \cvdepartment \cvinstitution \cvemail \cvwebsite
+%               \cvselfname{<family>}{<given>}   (bolded in every author list)
+%               \makecvheader
+%   Sections    \cvsection{<Title>}   \cvsubsection{<Title>}   \cvnote{<text>}
+%   Entries     \cventry{<title>}{<date>}{<organization>}{<details>}
+%                 optional bullets:  \begin{cvbullets} \item ... \end{cvbullets}
+%               \cvitem{<text>}{<date>}            one-line bulleted item
+%               \cvlink{<url>}{<label>}            clickable label in small caps (DOI, Code, ...)
+%   Bib lists   \cvpublist{<subsection title>}{<category>}
+%               categories: journal, submitted, conference, korean, presentation
+%
+% Dates: always write them the same way --  2024,  2024--2025,  2025--Present,
+%        Sep 2026,  Fall 2025.
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cvstyle}[2026/10/01 Curriculum vitae style]
+
+\RequirePackage{etoolbox}
+\RequirePackage[letterpaper, margin=1in, footskip=0.45in]{geometry}
+\RequirePackage{xcolor}
+\RequirePackage{enumitem}
+\RequirePackage{fancyhdr}
+\RequirePackage{lastpage}
+\RequirePackage[normalem]{ulem}
+
+% ---------------------------------------------------------------------------
+% Fonts, colors, spacing
+% ---------------------------------------------------------------------------
+\RequirePackage{sourceserifpro}
+% Headings: same serif family, semibold (section titles add letter spacing).
+\newfontfamily\cv@headfont{SourceSerifPro}[Extension=.otf,
+  UprightFont=*-Semibold, ItalicFont=*-SemiboldIt]
+\linespread{1.12}
+
+\definecolor{cvmuted}{HTML}{555555}   % footer
+\definecolor{cvlink}{HTML}{0563C1}    % hyperlinks (standard link blue)
+
+\newlength{\cvsectionskip}    \setlength{\cvsectionskip}{16pt}  % before a section
+\newlength{\cvsubsectionskip} \setlength{\cvsubsectionskip}{12pt}
+\newlength{\cventryskip}      \setlength{\cventryskip}{8pt}     % between entries
+\newlength{\cvitemskip}       \setlength{\cvitemskip}{3pt}      % between one-line items
+\newlength{\cvpubskip}        \setlength{\cvpubskip}{4pt}       % between bib items
+\newlength{\cvdatewidth}      \setlength{\cvdatewidth}{1.25in}  % right date column
+\newlength{\cvbulletindent}   \setlength{\cvbulletindent}{1.1em}
+\newlength{\cvpublabelwidth}  \setlength{\cvpublabelwidth}{2.2em}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\raggedbottom
+\AtBeginDocument{\raggedright}
+\clubpenalty=10000 \widowpenalty=10000  % never leave one line of a paragraph alone on a page
+
+% Start a new page if less than #1 is left. (Unlike needspace.sty, this adds no
+% preferred breakpoint, which would end pages early under \raggedbottom.)
+\newcommand{\cv@needspace}[1]{%
+  \par\penalty\@M
+  \begingroup
+    \dimen@=#1\relax
+    \dimen@ii=\pagegoal \advance\dimen@ii by -\pagetotal
+    \ifdim\dimen@>\dimen@ii \ifdim\dimen@ii>\z@ \vfil\fi \penalty-\@M \fi
+  \endgroup}
+
+% Vertical space before an entry, skipped right below a heading.
+\newif\ifcv@afterheading
+\newcommand{\cv@skip}[1]{%
+  \par\ifcv@afterheading\global\cv@afterheadingfalse\else\addvspace{#1}\fi}
+
+% ---------------------------------------------------------------------------
+% Header
+% ---------------------------------------------------------------------------
+% \cvname{...} stores \cv@name, and so on for each field (empty by default).
+\newcommand{\cv@field}[1]{\csdef{cv@#1}{}\csdef{cv#1}##1{\csdef{cv@#1}{##1}}}
+\forcsvlist{\cv@field}{name,title,department,institution,email,website}
+\newcommand{\cv@selffamily}{}  \newcommand{\cv@selfgiven}{}
+\newcommand{\cvselfname}[2]{\renewcommand{\cv@selffamily}{#1}\renewcommand{\cv@selfgiven}{#2}}
+
+% Header lines are printed only when the field is non-empty.
+\newcommand{\cv@line}[2][]{\ifdefempty{#2}{}{#1#2\par}}% [label]{field}
+
+\newcommand{\makecvheader}{%
+  \begin{center}
+    {\fontsize{20}{24}\selectfont\cv@name\par}
+    \vspace{4pt}
+    \cv@line{\cv@title}\cv@line{\cv@department}\cv@line{\cv@institution}
+    \vspace{4pt}
+    \ifdefempty{\cv@email}{}{Email: \href{mailto:\cv@email}{\cv@email}\par}
+    \ifdefempty{\cv@website}{}{Website: \href{https://\cv@website}{\cv@website}\par}
+  \end{center}
+  \vspace{2pt}}
+
+% ---------------------------------------------------------------------------
+% Page style, links, PDF metadata
+% ---------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\color{cvmuted}\cv@name\enspace|\enspace Curriculum Vitae\enspace|\enspace Updated \today}
+\fancyfoot[R]{\footnotesize\color{cvmuted}Page \thepage\ of \pageref*{LastPage}}
+
+\AtEndPreamble{%
+  \RequirePackage{hyperref}%
+  \hypersetup{colorlinks, allcolors=cvlink, pdftitle={Curriculum Vitae -- \cv@name}, pdfauthor={\cv@name}}}
+
+% ---------------------------------------------------------------------------
+% Sections and entries
+% ---------------------------------------------------------------------------
+\newcounter{cv@section}
+
+\newcommand{\cvsection}[1]{%
+  \par\addvspace{\cvsectionskip}%
+  \cv@needspace{8\baselineskip}% heading + subheading + first entry
+  \stepcounter{cv@section}%
+  \pdfbookmark[0]{#1}{cvsection.\arabic{cv@section}}%
+  {\cv@headfont\addfontfeatures{LetterSpace=12}\fontsize{10.5}{13}\selectfont\MakeUppercase{#1}\par}%
+  \nobreak\vspace{2pt}%
+  \hrule height 0.4pt%
+  \nobreak\vspace{7pt}\nobreak
+  \global\cv@afterheadingtrue}
+
+\newcommand{\cvsubsection}[1]{%
+  \cv@skip{\cvsubsectionskip}%
+  \cv@needspace{4\baselineskip}%
+  {\cv@headfont\itshape #1\par}%
+  \nobreak\vspace{4pt}\nobreak
+  \global\cv@afterheadingtrue}
+
+% Small legend line under a heading (e.g., author marks).
+\newcommand{\cvnote}[1]{%
+  {\small#1\par}\nobreak\vspace{3pt}\nobreak
+  \global\cv@afterheadingfalse}
+
+% Text on the left, date flush right in a fixed-width column, so dates line
+% up across the whole document. #1 = width already used on the left.
+\newcommand{\cv@withdate}[3]{% #1 used width, #2 text, #3 date
+  \parbox[t]{\dimexpr\linewidth-#1-\cvdatewidth\relax}{\raggedright #2\strut}%
+  \parbox[t]{\cvdatewidth}{\raggedleft #3\strut}\par}
+
+% \cventry{<title>}{<date>}{<organization>}{<details>}
+%   line 1: bold title ............................. date
+%   line 2: italic organization, details
+\newcommand{\cventry}[4]{%
+  \cv@skip{\cventryskip}%
+  \cv@needspace{3\baselineskip}%
+  \noindent\cv@withdate{0pt}{\textbf{#1}}{#2}%
+  \ifblank{#3#4}{}{%
+    \nobreak\textit{#3}\ifblank{#3}{}{\ifblank{#4}{}{, }}#4\par}}
+
+\newenvironment{cvbullets}
+  {\begin{itemize}[leftmargin=\cvbulletindent, labelsep=0.5em, label=\textbullet,
+     topsep=1pt, itemsep=0.5pt, parsep=0pt, partopsep=0pt,
+     beginpenalty=10000]}% keep the first bullet with its entry
+  {\end{itemize}}
+
+% \cvitem{<text>}{<date>}
+\newcommand{\cvitem}[2]{%
+  \cv@skip{\cvitemskip}%
+  \noindent\makebox[\cvbulletindent][l]{\textbullet}%
+  \cv@withdate{\cvbulletindent}{#1}{#2}}
+
+\newcommand{\cvlinksep}{\hspace{0.6em}}
+\newcommand{\cvlink}[2]{\href{#1}{{\mdseries\scshape\MakeLowercase{#2}}}}
+
+% ---------------------------------------------------------------------------
+% Bibliography (publications and presentations)
+% ---------------------------------------------------------------------------
+\RequirePackage[backend=biber, style=numeric, sorting=ydnt, maxbibnames=99,
+  giveninits=true]{biblatex}
+
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    % Everything in presentations.bib is a talk.
+    \map{\perdatasource{presentations.bib}
+         \step[fieldset=keywords, fieldvalue=presentation]}
+    % Everything in manuscripts.bib is under review (not public yet).
+    \map{\perdatasource{manuscripts.bib}
+         \step[fieldset=pubstate, fieldvalue=submitted]}
+    % Target journal of a manuscript under review.
+    \map{\step[fieldsource=submittedto, fieldtarget=usera]}
+    % Code repository (same field the website uses for its "Code" button).
+    \map{\step[fieldsource=code, fieldtarget=verba]}
+  }
+}
+
+% --- Categories: which list an entry belongs to (first match wins) ----------
+%   presentation : any entry in presentations.bib
+%   submitted    : pubstate = submitted (or any entry in manuscripts.bib)
+%   hidden       : pubstate = prepublished (a preprint intentionally not listed)
+%   korean       : keywords = {korean}, published
+%   journal      : @article, published
+%   conference   : @inproceedings / @incollection / @inbook, published
+%   uncategorized: anything else (reported as a warning in the log)
+% "Published" means no pubstate, or pubstate = inpress / forthcoming.
+\newcommand{\cv@setcategory}{%
+  \def\cv@category{uncategorized}%
+  \ifkeyword{presentation}{\def\cv@category{presentation}}{%
+  \iffieldequalstr{pubstate}{submitted}{\def\cv@category{submitted}}{%
+  \iffieldequalstr{pubstate}{prepublished}{\def\cv@category{hidden}}{%
+  \ifboolexpr{test {\iffieldundef{pubstate}} or test {\iffieldequalstr{pubstate}{inpress}}
+    or test {\iffieldequalstr{pubstate}{forthcoming}}}{%
+    \ifkeyword{korean}{\def\cv@category{korean}}{%
+    \ifentrytype{article}{\def\cv@category{journal}}{%
+    \ifboolexpr{test {\ifentrytype{inproceedings}} or test {\ifentrytype{incollection}}
+      or test {\ifentrytype{inbook}}}{\def\cv@category{conference}}{}}}}{}}}}}
+\defbibcheck{cv}{\cv@setcategory\ifdefstrequal{\cv@category}{\cv@wanted}{}{\skipentry}}
+
+% --- Author names -----------------------------------------------------------
+% Data annotations in the .bib file:  author+an = {2=equal; 3=corresponding}
+%   equal         -> dagger     corresponding -> asterisk
+%   presenter     -> underline  advisee       -> underline (your student)
+\DeclareDelimFormat{multinamedelim}{\addcomma\space}
+\DeclareDelimFormat{finalnamedelim}{\addcomma\space}
+\DeclareNameFormat{cv}{%
+  \nameparts{#1}%
+  \let\cv@bold\@firstofone \let\cv@ul\@firstofone
+  \ifdefstrequal{\namepartfamily}{\cv@selffamily}
+    {\ifdefstrequal{\namepartgiven}{\cv@selfgiven}{\let\cv@bold\textbf}{}}{}%
+  \ifitemannotation{presenter}{\let\cv@ul\uline}{}%
+  \ifitemannotation{advisee}{\let\cv@ul\uline}{}%
+  \usebibmacro{name:delim}{\namepartgiven\namepartfamily}%
+  \cv@ul{\cv@bold{\namepartfamily\ifdefvoid{\namepartgiveni}{}{, \namepartgiveni}}}%
+  \ifitemannotation{equal}{\textsuperscript{\textdagger}}{}%
+  \ifitemannotation{corresponding}{\textsuperscript{*}}{}%
+  \usebibmacro{name:andothers}}
+
+% --- Entry layout -----------------------------------------------------------
+%   Authors (Year). Title. Journal, Vol(No), pages.  DOI  Code
+\DeclareFieldFormat{cv:pages}{\mknormrange{#1}}
+\DeclareFieldFormat{cv:in}{In \mkbibemph{#1}}
+\DeclareFieldFormat*{title}{#1}
+
+\newbibmacro{cv:head}{%
+  \printnames[cv]{author}%
+  \setunit{\addspace}%
+  \printtext[parens]{\printfield{year}}%
+  \setunit{\addperiod\space}%
+  \printfield{title}%
+  \setunit{\addperiod\space}}
+
+\newbibmacro{cv:submitted}{%
+  \printtext{Under review\iffieldundef{usera}{}{ in \mkbibemph{\thefield{usera}}}}}
+
+\newbibmacro{cv:journal}{%
+  \printfield[emph]{journaltitle}%
+  \setunit{\addcomma\space}%
+  \printfield{volume}%
+  \printfield[parens]{number}%
+  \setunit{\addcomma\space}%
+  \printfield[cv:pages]{pages}%
+  \setunit{\addcomma\space}%
+  \printfield{pubstate}}
+
+\newbibmacro{cv:proceedings}{%
+  \printfield[cv:in]{booktitle}%
+  \setunit{\addcomma\space}%
+  \printfield{pages}}
+
+\newbibmacro{cv:event}{%
+  \printfield[emph]{eventtitle}%
+  \setunit{\addcomma\space}%
+  \printfield{venue}%
+  \setunit{\addspace}%
+  \printfield[parens]{type}}
+
+% Links are printed after the final period, as clickable words.
+\newcommand{\cv@putlink}[2]{\cvlinksep\cvlink{#1}{#2}}
+\newbibmacro{cv:links}{%
+  \iffieldundef{doi}
+    {\iffieldundef{eprint}
+       {\iffieldundef{url}{}{\cv@putlink{\thefield{url}}{Link}}}
+       {\cv@putlink{https://arxiv.org/abs/\thefield{eprint}}{arXiv}}}
+    {\cv@putlink{https://doi.org/\thefield{doi}}%
+       {\iffieldequalstr{pubstate}{submitted}{Preprint}{DOI}}}%
+  \iffieldundef{verba}{}{\cv@putlink{\thefield{verba}}{Code}}}
+
+\newbibmacro{cv:finish}{\finentry\usebibmacro{cv:links}}
+
+\DeclareBibliographyDriver{article}{%
+  \usebibmacro{cv:head}%
+  \iffieldequalstr{pubstate}{submitted}
+    {\usebibmacro{cv:submitted}}{\usebibmacro{cv:journal}}%
+  \usebibmacro{cv:finish}}
+\DeclareBibliographyAlias{misc}{article}
+\DeclareBibliographyAlias{online}{article}
+
+\DeclareBibliographyDriver{inproceedings}{%
+  \usebibmacro{cv:head}%
+  \iffieldequalstr{pubstate}{submitted}
+    {\usebibmacro{cv:submitted}}{\usebibmacro{cv:proceedings}}%
+  \usebibmacro{cv:finish}}
+\DeclareBibliographyAlias{incollection}{inproceedings}
+\DeclareBibliographyAlias{inbook}{inproceedings}
+
+\DeclareBibliographyDriver{unpublished}{%
+  \usebibmacro{cv:head}%
+  \usebibmacro{cv:event}%
+  \usebibmacro{cv:finish}}
+
+% --- Numbered lists with stable, reverse numbering --------------------------
+% The newest entry gets the highest number, so existing numbers never change
+% when a new paper is added ([1] is always the first entry of each list).
+% Totals are read from the previous run (latexmk reruns automatically).
+\newcounter{cv@item}
+\newcommand{\cv@settotal}[2]{\csgdef{cv@total@#1}{#2}}
+\newcommand{\cv@number}{%
+  \ifcsdef{cv@total@\cv@wanted}
+    {\the\numexpr\csuse{cv@total@\cv@wanted}+1-\value{cv@item}\relax}
+    {\arabic{cv@item}}}
+
+\defbibenvironment{cvpubs}
+  {\setcounter{cv@item}{0}%
+   \global\cv@afterheadingfalse
+   \raggedright
+   \list{}{%
+     \setlength{\labelwidth}{\cvpublabelwidth}%
+     \setlength{\labelsep}{0pt}%
+     \setlength{\leftmargin}{\cvpublabelwidth}%
+     \setlength{\itemsep}{\cvpubskip}%
+     \setlength{\parsep}{0pt}%
+     \setlength{\topsep}{0pt}}%
+   \renewcommand*{\makelabel}[1]{##1\hss}}
+  {\immediate\write\@auxout{\string\cv@settotal{\cv@wanted}{\arabic{cv@item}}}%
+   \endlist}
+  {\stepcounter{cv@item}%
+   \item[{[\cv@number]}]}
+
+\defbibheading{cvsub}[]{\ifblank{#1}{}{\cvsubsection{#1}}}
+
+% \cvpublist{<subsection title or empty>}{<category>}
+% Prints nothing (not even the heading) when the category is empty.
+\newcommand{\cvpublist}[2]{%
+  \def\cv@wanted{#2}%
+  \printbibliography[env=cvpubs, heading=cvsub, title={#1}, check=cv]}
+
+% Warn about bib entries that appear in no list, so nothing disappears silently.
+\defbibenvironment{cvwarn}{}{}{%
+  \PackageWarningNoLine{cvstyle}{Entry '\thefield{entrykey}' is not shown in
+    any CV list (check its entry type, keywords, or pubstate)}}
+\AtEndDocument{%
+  \def\cv@wanted{uncategorized}%
+  \begingroup\setbox0=\vbox{\printbibliography[env=cvwarn, heading=none, check=cv]}\endgroup}
+
+\endinput

@@ -1,0 +1,23 @@
+# Publications that bin/check_new_publications.py should never propose,
+# e.g., papers by other researchers with the same name that OpenAlex attributes
+# to this ORCID. Add a DOI (or, if there is no DOI, the exact title).
+dois:
+  # SnO / thin-film transistor and semiconductor papers (a different Y. Choi)
+  - 10.1109/led.2014.2363879
+  - 10.1109/led.2015.2409854
+  - 10.1088/0268-1242/30/8/085004
+  - 10.1109/led.2016.2516578
+  - 10.1116/1.4949558
+  - 10.1116/1.4923236
+  - 10.5573/jsts.2016.16.2.198
+  - 10.1166/jnn.2015.11154
+  - 10.1166/jnn.2016.13513
+  - 10.1109/vlsit.2006.1705254
+  - 10.1109/essderc.2007.4430944
+  # Fault-tolerant computing papers (1988-1992)
+  - 10.1109/12.4614
+  - 10.1109/12.4615
+  - 10.1109/24.159814
+titles:
+  - Electrical Performance and Instabilities of p-type SnO Thin-Film Transistors
+  - Low-voltage pentacene OTFTs with high-K gate dielectric and its application to AMOLED
