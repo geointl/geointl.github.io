@@ -6,7 +6,9 @@ inline: false
 related_posts: false
 ---
 
-**Awarded!** Yongjin received the International Society for Soil Mechanics and Geotechnical Engineering (ISSMGE) [Bright Spark Lecture Award](https://www.issmge.org/the-society/awards/bright-spark-lecture-award) and delivered a Bright Spark Lecture at the 4th International Workshop on the Future of Machine Learning in Geotechnics ([FOMLIG 2026](https://fomlig2026.com)) in Seoul. The award recognizes promising young geotechnical scholars with a invited lecture at ISSMGE conferences.
+**Awarded!** Yongjin received the International Society for Soil Mechanics and Geotechnical Engineering (ISSMGE) [Bright Spark Lecture Award](https://www.issmge.org/the-society/awards/bright-spark-lecture-award) and delivered a Bright Spark Lecture at the 4th International Workshop on the Future of Machine Learning in Geotechnics ([FOMLIG 2026](https://fomlig2026.com)) in Seoul. The award recognizes promising young geotechnical scholars with an invited lecture at ISSMGE conferences.
+
+See the [official ISSMGE announcement](https://www.issmge.org/article/bright-spark-lectures-4th-workshop-on-future-of-machine-learning-in-geotechnics-fomlig-seoul).
 
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
