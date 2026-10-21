@@ -352,7 +352,7 @@
       font-size: 1.625rem;
     }
   }
-</style> <div class="row guide-layout"> <div class="col-sm-3"> <nav class="guide-sidebar" aria-label="Lab Guide navigation"> <p class="guide-nav-label">Lab Guide</p> <ul class="guide-nav"> <li class="active"> <a href="/guide/">Overview</a> <nav id="toc-sidebar" class="toc toc-sidebar" aria-label="Table of contents" data-toc-collapse="expanded" data-toc-collapse-depth="3"></nav> </li> <li class=""> <a href="/guide/onboarding/">Onboarding</a> </li> <li class=""> <a href="/guide/structure-of-academic-journal-paper/">IMRAD Structure Guide</a> </li> </ul> </nav> </div> <div class="col-sm-9"> <div class="post guide-content"> <header class="post-header"> <h1 class="post-title">Lab Guide</h1> <p class="post-description">Onboarding guides, lab policies, and resources for GeoIntelligence members.</p> </header> <article class="guide-article"> <p>Welcome to the <strong>Lab Guide</strong> — a central place for everything you need to know as a member of GeoIntelligence.</p> <p>Use the sidebar to navigate between sections. Each page has a table of contents on the left that tracks your scroll position as you read.</p> </article> </div> </div> </div> <script>
+</style> <div class="row guide-layout"> <div class="col-sm-3"> <nav class="guide-sidebar" aria-label="Lab Guide navigation"> <p class="guide-nav-label">Lab Guide</p> <ul class="guide-nav"> <li class="active"> <a href="/guide/">Overview</a> <nav id="toc-sidebar" class="toc toc-sidebar" aria-label="Table of contents" data-toc-collapse="expanded" data-toc-collapse-depth="3"></nav> </li> <li class=""> <a href="/guide/onboarding/">Onboarding</a> </li> <li class=""> <a href="/guide/structure-of-academic-journal-paper/">IMRAD Structure Guide</a> </li> <li class=""> <a href="/guide/literature-review/">Literature Review</a> </li> </ul> </nav> </div> <div class="col-sm-9"> <div class="post guide-content"> <header class="post-header"> <h1 class="post-title">Lab Guide</h1> <p class="post-description">Onboarding guides, lab policies, and resources for GeoIntelligence members.</p> </header> <article class="guide-article"> <p>Welcome to the <strong>Lab Guide</strong> — a central place for everything you need to know as a member of GeoIntelligence.</p> <p>Use the sidebar to navigate between sections. Each page has a table of contents on the left that tracks your scroll position as you read.</p> </article> </div> </div> </div> <script>
   document.addEventListener("DOMContentLoaded", () => {
     const ALERT_TYPES = {
       NOTE: { class: "note", icon: "fa-circle-info", label: "Note" },
@@ -815,6 +815,11 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather.html";
+            },},{id: "guide-literature-review",
+          title: 'Literature Review',
+          description: "Tools for finding, understanding, and managing papers to identify the research gap.",
+          section: "Guide",handler: () => {
+              window.location.href = "/guide/literature-review/";
             },},{id: "guide-onboarding",
           title: 'Onboarding',
           description: "Tools, software, and learning materials for new lab members.",
