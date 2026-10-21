@@ -1,16 +1,16 @@
 metadata:
-  last_updated: '2026-10-14'
+  last_updated: '2026-10-21'
 papers:
   xKixfUcAAAAJ:2osOgNQ5qMEC:
     citations: 7
     title: Elastic modulus and layer coefficient of permeable block pavements based on plate load tests
     year: '2017'
   xKixfUcAAAAJ:35N4QoGY0k4C:
-    citations: 13
+    citations: 14
     title: Field data-based prediction of local scour depth around bridge piers using interpretable machine learning
     year: '2025'
   xKixfUcAAAAJ:3s1wT3WcHBgC:
-    citations: 15
+    citations: 16
     title: "Tunnel lining segmentation from ground\u2010penetrating radar images using advanced single\u2010and two\u2010stage object detection and segmentation models"
     year: '2025'
   xKixfUcAAAAJ:4DMP91E08xMC:
@@ -50,7 +50,7 @@ papers:
     title: Accelerating stochastic simulation of post-failure landslide runout using a random graph neural network-based simulator
     year: '2026'
   xKixfUcAAAAJ:KxtntwgDAa4C:
-    citations: 6
+    citations: 7
     title: 'Operator learning for consolidation: An architectural comparison for DeepONet variants'
     year: '2026'
   xKixfUcAAAAJ:Tyk-4Ss8FVUC:
