@@ -12,9 +12,21 @@ Welcome to the lab\! A PhD or research journey is like a marathon—building a s
 
 ## Prerequisites & Essential Tools
 
-### Linux & Unix Shell
+### Development OS
 
-Our group pursues open-source development and the ecosystem. Most ML/AI tools and open-source software are developed in Linux environments. Learn basic Linux and shell skills for both local and HPC workflows.
+Our group primarily develops in Linux. 
+Most ML/AI and open-source research tools are also friendly for Linux environments then Windows. 
+In addition, coding agents (Cluade Code, Codex, Cursor, etc.) are more powerful in Linux.
+If you are on Windows, set up Linux using one of the following:
+
+- **WSL2 (Recommended):** Runs Ubuntu directly inside Windows without dual-booting ([WSL Install Guide](https://learn.microsoft.com/en-us/windows/wsl/install)).
+- **Ubuntu:** Full native Linux OS via dual-boot or a dedicated machine ([Ubuntu Desktop](https://ubuntu.com/desktop)).
+
+For Mac users, macOS is Unix-based and natively supports terminal-based development out of the box.
+
+### Linux & Unix Shell Command Line Interface (CLI)
+
+You will need basic shell CLI skills to navigate files, manage environments, and run workflows on both local machines and remote HPC servers.
 
 - **Unix Tutorial:** [Linux/Unix Tutorial](https://info-ee.surrey.ac.uk/Teaching/Unix/)
 - **Shell Basics:** [Unix Shell Novice Guide](https://swcarpentry.github.io/shell-novice/06-script.html)
