@@ -15,8 +15,8 @@ Welcome to the lab\! A PhD or research journey is like a marathon—building a s
 ### Development OS
 
 Our group primarily develops in Linux. 
-Most ML/AI and open-source research tools are also friendly for Linux environments then Windows. 
-In addition, coding agents (Cluade Code, Codex, Cursor, etc.) are more powerful in Linux.
+Most ML/AI and open-source research tools are also more friendly to Linux environments than Windows. 
+In addition, coding agents (Claude Code, Codex, Cursor, etc.) are more powerful in Linux.
 If you are on Windows, set up Linux using one of the following:
 
 - **WSL2 (Recommended):** Runs Ubuntu directly inside Windows without dual-booting ([WSL Install Guide](https://learn.microsoft.com/en-us/windows/wsl/install)).
