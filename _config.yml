@@ -246,6 +246,7 @@ exclude:
   - docker-compose-slim.yml
   - docs/
   - FAQ.md
+  - _guide/refs/
   - Gemfile
   - Gemfile.lock
   - INSTALL.md

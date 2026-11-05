@@ -25,6 +25,7 @@ cv/*.synctex.gz
 # CV PDF is built from cv/ (locally by latexmk, on deploy by GitHub Actions)
 assets/pdf/CV_ChoiYJ.pdf
 al-folio-upgrade-report.md
+_guide/refs/
 node_modules/
 output/playwright/
 test-results/
