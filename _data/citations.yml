@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-11-02'
+  last_updated: '2026-11-13'
 papers:
   xKixfUcAAAAJ:2osOgNQ5qMEC:
     citations: 7
@@ -58,11 +58,11 @@ papers:
     title: Prediction models based on regression and artificial neural network for moduli of layers constituted by open-graded aggregates
     year: '2021'
   xKixfUcAAAAJ:W7OEmFMy1HYC:
-    citations: 75
+    citations: 78
     title: Graph neural network-based surrogate model for granular flows
     year: '2024'
   xKixfUcAAAAJ:Wp0gIr-vW9MC:
-    citations: 20
+    citations: 22
     title: Inverse analysis of granular flows using differentiable graph neural network simulator
     year: '2024'
   xKixfUcAAAAJ:YFjsv_pBGBYC:
@@ -70,7 +70,7 @@ papers:
     title: Prediction models based on regression and artificial neural network for moduli of layers constituted by open-graded aggregates. Materials (Basel)(2021)
     year: '2021'
   xKixfUcAAAAJ:YsMSGLbcyi4C:
-    citations: 13
+    citations: 14
     title: A machine learning approach to predicting pore pressure response in liquefiable sands under cyclic loading
     year: '2023'
   xKixfUcAAAAJ:aqlVkmm33-oC:
