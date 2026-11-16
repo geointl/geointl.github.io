@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-11-13'
+  last_updated: '2026-11-16'
 papers:
   xKixfUcAAAAJ:2osOgNQ5qMEC:
     citations: 7
@@ -32,6 +32,10 @@ papers:
   xKixfUcAAAAJ:CHSYGLWDkRkC:
     citations: 0
     title: The interplay between pore and particle characteristics in sands based on computed tomographic image analyses
+    year: '2026'
+  xKixfUcAAAAJ:D_sINldO8mEC:
+    citations: 0
+    title: Design Properties and LWD-Based Compaction Evaluation of Open-Graded Aggregate Bases for Permeable Pavements
     year: '2026'
   xKixfUcAAAAJ:HDshCWvjkbEC:
     citations: 6
@@ -92,6 +96,10 @@ papers:
   xKixfUcAAAAJ:eJXPG6dFmWUC:
     citations: 0
     title: 'Differentiable FEM versus PINN for pavement layer inverse analysis: enforcing physics as hard or soft constraints'
+    year: '2026'
+  xKixfUcAAAAJ:eflP2zaiRacC:
+    citations: 0
+    title: "A hybrid GNN\u2013FEM framework for phase-field fracture simulation: Physics-regularized hybridization for generalizable surrogate modeling"
     year: '2026'
   xKixfUcAAAAJ:hC7cP41nSMkC:
     citations: 33
