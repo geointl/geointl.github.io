@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-11-16'
+  last_updated: '2026-11-17'
 papers:
   xKixfUcAAAAJ:2osOgNQ5qMEC:
     citations: 7
@@ -17,10 +17,6 @@ papers:
     citations: 3
     title: Evaluation of py Curves for Group Piles in Cohesive Soil Based on 3D Numerical Analysis
     year: '2021'
-  xKixfUcAAAAJ:4fKUyHm3Qg0C:
-    citations: 2
-    title: A Hybrid GNN-FEM Framework for Phase-Field Fracture Simulation. Physics-Preserving Hybridization for Generalizable Surrogate Modeling
-    year: '2026'
   xKixfUcAAAAJ:70eg2SAEIzsC:
     citations: 5
     title: Differentiable graph neural network simulator for forward and inverse modeling of multi-layered slope system with multiple material properties
@@ -98,11 +94,11 @@ papers:
     title: 'Differentiable FEM versus PINN for pavement layer inverse analysis: enforcing physics as hard or soft constraints'
     year: '2026'
   xKixfUcAAAAJ:eflP2zaiRacC:
-    citations: 0
+    citations: 2
     title: "A hybrid GNN\u2013FEM framework for phase-field fracture simulation: Physics-regularized hybridization for generalizable surrogate modeling"
     year: '2026'
   xKixfUcAAAAJ:hC7cP41nSMkC:
-    citations: 33
+    citations: 34
     title: 'Sequence deep learning for seismic ground response modeling: 1D-CNN, LSTM, and transformer approach'
     year: '2024'
   xKixfUcAAAAJ:nb7KW1ujOQ8C:

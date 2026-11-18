@@ -103,7 +103,7 @@ Beyond granular flows, GNN-based approaches extend to fluid flow and solid mecha
       </div>
     </div>
     <div class="caption">
-      A Hybrid GNN–FEM Framework for Phase-Field Fracture Simulation: full FEM (top) compared with hybrid GNN-FEM with physics-informed domain decomposition (bottom) {% cite moon2026hybrid %}.
+      A Hybrid GNN–FEM Framework for Phase-Field Fracture Simulation: full FEM (top) compared with hybrid GNN-FEM with physics-informed domain decomposition (bottom) {% cite moon2027hybrid %}.
     </div>
   </swiper-slide>
   <swiper-slide>
