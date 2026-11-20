@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-11-17'
+  last_updated: '2026-11-20'
 papers:
   xKixfUcAAAAJ:2osOgNQ5qMEC:
     citations: 7
     title: Elastic modulus and layer coefficient of permeable block pavements based on plate load tests
     year: '2017'
   xKixfUcAAAAJ:35N4QoGY0k4C:
-    citations: 15
+    citations: 16
     title: Field data-based prediction of local scour depth around bridge piers using interpretable machine learning
     year: '2025'
   xKixfUcAAAAJ:3s1wT3WcHBgC:
@@ -43,7 +43,7 @@ papers:
     year: '2024'
   xKixfUcAAAAJ:IjCSPb-OGe4C:
     citations: 31
-    title: Assessment of field compaction of aggregate base materials for permeable pavements based on plate load tests
+    title: Assessment of Field Compaction of Aggregate Base Materials for Permeable Pavements Based on Plate Load Tests.
     year: '2018'
   xKixfUcAAAAJ:K3LRdlH-MEoC:
     citations: 0
@@ -58,11 +58,11 @@ papers:
     title: Prediction models based on regression and artificial neural network for moduli of layers constituted by open-graded aggregates
     year: '2021'
   xKixfUcAAAAJ:W7OEmFMy1HYC:
-    citations: 78
+    citations: 80
     title: Graph neural network-based surrogate model for granular flows
     year: '2024'
   xKixfUcAAAAJ:Wp0gIr-vW9MC:
-    citations: 22
+    citations: 23
     title: Inverse analysis of granular flows using differentiable graph neural network simulator
     year: '2024'
   xKixfUcAAAAJ:YFjsv_pBGBYC:
@@ -82,7 +82,7 @@ papers:
     title: Resilient Modulus and Permanent Deformation of 40-mm Open-Graded Aggregates based on Repeated-Load Triaxial Tests
     year: '2019'
   xKixfUcAAAAJ:dhFuZR0502QC:
-    citations: 15
+    citations: 16
     title: Accelerating particle and fluid simulations with differentiable graph networks for solving forward and inverse problems
     year: '2023'
   xKixfUcAAAAJ:dshw04ExmUIC:
@@ -98,7 +98,7 @@ papers:
     title: "A hybrid GNN\u2013FEM framework for phase-field fracture simulation: Physics-regularized hybridization for generalizable surrogate modeling"
     year: '2026'
   xKixfUcAAAAJ:hC7cP41nSMkC:
-    citations: 34
+    citations: 33
     title: 'Sequence deep learning for seismic ground response modeling: 1D-CNN, LSTM, and transformer approach'
     year: '2024'
   xKixfUcAAAAJ:nb7KW1ujOQ8C:
